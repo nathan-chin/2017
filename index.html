@@ -1,45 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
+  <script>
+   var $window = $(window),
+       $stickyEl = $('#nav-container'),
+       elTop = $stickyEl.offset().top;
+
+   $window.scroll(function() {
+        $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
+    });</script>
   <meta charset="utf-8">
-  <link href="style.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+  <link href="../../Summer 2017/Personal Website/style.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Roboto:100" rel="stylesheet">
   <title>Nathan Chin | Software Engineer</title>
  </head>
 
-<body>
- <!--<div class="welcome">
-  <h1 class="welcome-text">Hi! My name is Nathan Chin</h1>
- </div>-->
- <div id="nav-text">
- <div class="navbar">
-  <ul>
-  	<li class="nav-item">Home</li>
-  	<li class="nav-item">About Me</li>
-  	<li class="nav-item">Projects</li>
-  	<li class="nav-item">Contact</li>
-  </ul>
- </div>
- </div>
- <div id="body-text">
- <div class="home">
-  <h1>Hello World!</h1>
-  <h2>Welcome to the personal website of Nathan Chin</h2>
- </div>
- <div class="about-me">
-  <h1 class="page-hook">Allow me to {chin}troduce myself</h1>
-  <h2>Can you tell I love puns?</h2>
-  <h3>I am a passionate software engineer who loves to learn</h3>
- </div>
- <div class="projects">
-  <h1 class="page-hook">Ways I've been chall{n-chin} myself</h1>
-  <h2>Projects make the world go round</h2>
- </div>
- <div class="contact">
-  <h1 class="page-hook">Thanks for cat{chin} up with me!</h1>
-  <h2>Here's my card</h2>
- </div>
- <p>Thomas Frank, who wrote the story in question; Eric Lichtblau, an editor in the unit; and Lex Haris, who oversaw the unit, have all left CNN.
+ <body>
+  
+  <div class="deadspace">
+  	<p>Thomas Frank, who wrote the story in question; Eric Lichtblau, an editor in the unit; and Lex Haris, who oversaw the unit, have all left CNN.
 "In the aftermath of the retraction of a story published on CNN.com, CNN has accepted the resignations of the employees involved in the story's publication," a spokesman said Monday evening.
 An internal investigation by CNN management found that some standard editorial processes were not followed when the article was published, people briefed on the results of the investigation said.
 The story, which reported that Congress was investigating a "Russian investment fund with ties to Trump officials," cited a single anonymous source.
@@ -58,6 +38,54 @@ He was part of an ambitious new investigative unit that was created last winter,
 A veteran of The New York Times who won a Pulitzer Prize for national reporting in 2006, Lichtblau joined CNN just three months ago.
 Haris, who was named the executive editor of CNN Investigates in January, was previously the executive editor of CNNMoney.
 "On Friday, CNN retracted a story published by my team. As Executive Editor of that team, I have resigned," Haris said in a statement. "I've been with CNN since 2001, and am sure about one thing: This is a news organization that prizes accuracy and fairness above all else. I am leaving, but will carry those principles wherever I go."</p>
-</div>
-</body>
+  </div>
+
+  <div id="nav-container">
+    <nav class="navbar">
+  	 <a class="nav-item">Home</a>
+  	 <a class="nav-item">About Me</a>
+  	 <a class="nav-item">Projects</a>
+  	 <a class="nav-item">Contact</a>
+    </nav>
+  </div>
+ 
+  <div id="page-container">
+   <div class="home">
+    <h1>Hello World!</h1>
+    <h2>Welcome to the personal website of Nathan Chin</h2>
+   </div>
+   <div class="about-me">
+    <h1 class="page-hook">Allow me to {chin}troduce myself</h1>
+    <h2>Can you tell I love puns?</h2>
+    <h3>I am a passionate software engineer who loves to learn</h3>
+   </div>
+   <div class="projects">
+    <h1 class="page-hook">Ways I've been chall{n-chin} myself</h1>
+    <h2>Projects make the world go round</h2>
+   </div>
+   <div class="contact">
+    <h1 class="page-hook">Thanks for cat{chin} up with me!</h1>
+    <h2>Here's my card</h2>
+   </div>
+   <p>Thomas Frank, who wrote the story in question; Eric Lichtblau, an editor in the unit; and Lex Haris, who oversaw the unit, have all left CNN.
+"In the aftermath of the retraction of a story published on CNN.com, CNN has accepted the resignations of the employees involved in the story's publication," a spokesman said Monday evening.
+An internal investigation by CNN management found that some standard editorial processes were not followed when the article was published, people briefed on the results of the investigation said.
+The story, which reported that Congress was investigating a "Russian investment fund with ties to Trump officials," cited a single anonymous source.
+These types of stories are typically reviewed by several departments within CNN -- including fact-checkers, journalism standards experts and lawyers -- before publication.
+This breakdown in editorial workflow disturbed the CNN executives who learned about it.
+In a staff meeting Monday afternoon, investigative unit members were told that the retraction did not mean the facts of the story were necessarily wrong. Rather, it meant that "the story wasn't solid enough to publish as-is," one of the people briefed on the investigation said.
+The reporting about the Russian investment fund and Trump officials was not relayed on CNN's television channels, but it was published on the web and shared on social media.
+On Friday, one of the people named in the story, Trump ally Anthony Scaramucci, disputed Frank's reporting and said, "I did nothing wrong."
+Friday night, once it was determined that editorial processes were not followed, CNN deleted the story from CNN.com. Soon thereafter, the story was officially retracted and replaced with an editor's note.
+The piece "did not meet CNN's editorial standards and has been retracted," the note said. "Links to the story have been disabled."
+The editor's note also included an apology to Scaramucci.
+"CNN did the right thing. Classy move. Apology accepted," Scaramucci tweeted the next morning. "Everyone makes mistakes. Moving on."
+The departures of Haris, Lichtblau and Frank are likely to come as a surprise to colleagues, particularly given the reputations of the three men.
+Frank worked for USA Today and Newsday for three decades, pursuing investigations and covering the Iraq war as an embedded reporter, before coming to work at CNN.
+He was part of an ambitious new investigative unit that was created last winter, bringing together existing teams from within the company and new hires like Lichtblau.
+A veteran of The New York Times who won a Pulitzer Prize for national reporting in 2006, Lichtblau joined CNN just three months ago.
+Haris, who was named the executive editor of CNN Investigates in January, was previously the executive editor of CNNMoney.
+"On Friday, CNN retracted a story published by my team. As Executive Editor of that team, I have resigned," Haris said in a statement. "I've been with CNN since 2001, and am sure about one thing: This is a news organization that prizes accuracy and fairness above all else. I am leaving, but will carry those principles wherever I go."</p>
+  </div>
+ </body>
 </html>
