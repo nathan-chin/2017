@@ -118,6 +118,14 @@ h1.intro-text {
 }
 
 .world-container {
+	-webkit-height: 400px;
+	-moz-height: 400px;
+	-ms-height: 400px;
+	-o-height: 400px;
+	-webkit-width: 400px;
+	-moz-width: 400px;
+	-ms-width: 400px;
+	-o-width: 400px;
 	width: 400px;
 	height: 400px;
 	position: relative;
