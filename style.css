@@ -70,7 +70,7 @@ body {
 	text-align: center;
 	border: 1px solid black;
 	display: block;
-	width: auto;
+	width: 100%;
 	left: 50%;
 	transform: translate(-50%);
 	position: fixed;
@@ -118,22 +118,15 @@ h1.intro-text {
 }
 
 .world-container {
-	-webkit-height: 400px;
-	-moz-height: 400px;
-	-ms-height: 400px;
-	-o-height: 400px;
-	-webkit-width: 400px;
-	-moz-width: 400px;
-	-ms-width: 400px;
-	-o-width: 400px;
-	width: 400px;
-	height: 400px;
+	width: 20%;
+	padding-top: 20%;
 	position: relative;
 	background: url(World_1.5.png);
 	background-size: cover;
 	z-index: 15;
 	border-radius: 100%;
 	margin: auto;
+	padding: auto;
 	animation: rotate 35s linear normal infinite;
 	border: 1px solid #191919;
 	box-shadow: -20px 0 75px 10px #191919 inset;
