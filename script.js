@@ -26,12 +26,11 @@ var updatePage = function(newTab){
 		shiftLeft(current, newTab);
 	}
 	else if((current !== newTab) && (current > newTab)){
-		showPage(current);
-		showPage(newTab);
 		shiftRight(current, newTab);
 	}
 	else{
 		showPage(current);
+		alert("Wrong");
 	}
 };
 
@@ -91,12 +90,13 @@ var shiftLeft = function(curTab, newTab){
 	var width = $(window).width();
 	//var widthCur = tempCur.width() + parseInt(tempCur.css('margin-left'));
 	//var widthNew = tempNew.width() + parseInt(tempCur.css('margin-right')) + parseInt(tempNew.css('margin-left'));
-	$(tempCur).animate({left: -width}, 1200);
-	$(tempNew).animate({left: -width}, 1100);
-	current = newTab;
-	$(tempCur).promise().done(function(){
+	$(tempCur).animate({left: -width}, {duration: 5000, queue: false});
+	$(tempNew).animate({left: -width}, {duration: 5000, queue: false});
+	
+	$(tempNew).promise().done(function(){
 		erasePages();
-		tempNew.css('left', 0);
+		current = newTab;
+		tempNew.css('left', '0');
 		showPage(newTab);
 	});
 };
@@ -105,14 +105,15 @@ var shiftRight = function(curTab, newTab){
 	var tempCur = getPage(current);
 	var tempNew = getPage(newTab);
 	
-	showPage(current);
-	showPage(newTab);
-	
 	var width = $(window).width();
+	$(tempNew).insertBefore(tempCur);
+	tempCur.css('left', -width);
+	showPage(current);
 	//var widthCur = tempCur.width() + parseInt(tempCur.css('margin-right'));
 	//var widthNew = tempNew.width() + parseInt(tempCur.css('margin-left')) + parseInt(tempNew.css('margin-right'));
-	//$(tempCur).animate({left: width}, 1200);
-	//$(tempNew).animate({left: width}, 1100);
+	$(tempCur).animate({left: 0}, {duration: 5000, queue: false});
+	$(tempNew).animate({left: 0}, {duration: 5000, queue: false});
+	showPage(newTab);
 	current = newTab;
 };
 

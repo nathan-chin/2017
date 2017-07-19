@@ -220,16 +220,14 @@ h1.intro-text {
 .portrait-container {
 	width: 25%;
 	border-radius: 100%;
-	margin-top: 1vh;
-	display: inline;
-	position: relative;
+	margin-top: 3%;
 	z-index: 1;
 	background-color: #5C8B99;
 	/*position: sticky;
 	top: 10px;*/
 }
 
-.portrait-container:hover {
+/*.portrait-container:hover {
 	animation: spin 3s linear normal infinite;
 }
 
@@ -237,7 +235,7 @@ h1.intro-text {
 	100%{
 		transform: rotate(360deg);
 	}
-}
+}*/
 
 .home-page-title {
 	font-size: 10rem;
