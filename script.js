@@ -23,8 +23,6 @@ $(window).scroll(function(){
 var updatePage = function(newTab){
 	erasePages();
 	if((current !== newTab) && (current < newTab)){
-		showPage(current);
-		showPage(newTab);
 		shiftLeft(current, newTab);
 	}
 	else if((current !== newTab) && (current > newTab)){
@@ -86,19 +84,35 @@ var getPage = function(num){
 var shiftLeft = function(curTab, newTab){
 	var tempCur = getPage(current);
 	var tempNew = getPage(newTab);
-	var widthCur = tempCur.width() + parseInt(tempCur.css('margin-left'));
-	var widthNew = tempNew.width() + parseInt(tempCur.css('margin-right')) + parseInt(tempNew.css('margin-left'));
-	$(tempCur).animate({left: -widthCur}, 1200);
-	$(tempNew).animate({left: -widthNew}, 1100);
+	
+	showPage(current);
+	showPage(newTab);
+	
+	var width = $(window).width();
+	//var widthCur = tempCur.width() + parseInt(tempCur.css('margin-left'));
+	//var widthNew = tempNew.width() + parseInt(tempCur.css('margin-right')) + parseInt(tempNew.css('margin-left'));
+	$(tempCur).animate({left: -width}, 1200);
+	$(tempNew).animate({left: -width}, 1100);
 	current = newTab;
+	$(tempCur).promise().done(function(){
+		erasePages();
+		tempNew.css('left', 0);
+		showPage(newTab);
+	});
 };
 
 var shiftRight = function(curTab, newTab){
 	var tempCur = getPage(current);
 	var tempNew = getPage(newTab);
-	var widthCur = tempCur.width() + parseInt(tempCur.css('margin-right'));
-	var widthNew = tempNew.width() + parseInt(tempCur.css('margin-left')) + parseInt(tempNew.css('margin-right'));
-	$(tempCur).animate({left: widthCur}, 1200);
-	$(tempNew).animate({left: widthNew}, 1100);
+	
+	showPage(current);
+	showPage(newTab);
+	
+	var width = $(window).width();
+	//var widthCur = tempCur.width() + parseInt(tempCur.css('margin-right'));
+	//var widthNew = tempNew.width() + parseInt(tempCur.css('margin-left')) + parseInt(tempNew.css('margin-right'));
+	//$(tempCur).animate({left: width}, 1200);
+	//$(tempNew).animate({left: width}, 1100);
+	current = newTab;
 };
 
