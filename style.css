@@ -169,6 +169,7 @@ h1.intro-text {
 	top: 0;
 	border-radius: 0 0 2px 2px;
 	z-index: 2;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .navbar {
@@ -193,17 +194,26 @@ h1.intro-text {
 	/*WEBSITE PAGES*/
 #page-container {
 	text-align: center;
-	display: inline;	
+	display: block;
+	white-space: nowrap;
+	
+}
+
+#page-container * {
+	vertical-align: top;
+	line-height: normal;
 }
 
 .page {
 	text-align: center;
-	margin: 7vh auto;
+	margin: 5% 10%;
 	background-color: whitesmoke;
 	width: 80%;
 	border-radius: 2px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	display: inline-block;
+	position: relative;
+	white-space: normal;
 	/*animation: float 15s ease normal infinite;*/
 }
 
