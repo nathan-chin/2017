@@ -219,6 +219,10 @@ h1.intro-text {
 	/*animation: float 15s ease normal infinite;*/
 }
 
+.shrink {
+	display: none;
+}
+
 .portrait-container {
 	width: 25%;
 	border-radius: 100%;

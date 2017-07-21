@@ -1,5 +1,7 @@
 // JavaScript Document
 var current = 0;
+var old;
+var notFirst = 0;
 
 $(document).ready(function(){
 	var pages = document.getElementsByClassName("page");
@@ -68,15 +70,28 @@ $(window).scroll(function(){
 });
 
 var updatePage = function(newTab){
-	if((current !== newTab) && (current < newTab)){
-		shiftLeft(newTab);
-		//alert("Left");
+	if(notFirst >= 1){
+		getPage(old).find('.body-container').removeClass('shrink');
+		if((current !== newTab) && (current < newTab)){
+			shiftLeft(newTab);
+			//alert("Left");
+		}
+		else{
+			shiftRight(newTab);
+			//("Right");
+		}
 	}
 	else{
-		shiftRight(newTab);
-		//("Right");
+		notFirst++;
+		if((current !== newTab) && (current < newTab)){
+			shiftLeft(newTab);
+			//alert("Left");
+		}
+		else{
+			shiftRight(newTab);
+			//("Right");
+		}
 	}
-	$('html, body').animate({scrollTop: 0}, 700);
 };
 
 var erasePages = function(){
@@ -143,10 +158,25 @@ var shiftLeft = function(newTab){
 	showPage(current);
 	//var widthCur = tempCur.width() + parseInt(tempCur.css('margin-left'));
 	//var widthNew = tempNew.width() + parseInt(tempCur.css('margin-right')) + parseInt(tempNew.css('margin-left'));
-	$(tempCur).animate({left: -width}, {duration: 700, queue: false});
-	$(tempNew).animate({left: -width}, {duration: 700, queue: false});
+	var scrollDist = $(document).scrollTop();
+	if(scrollDist !== 0){
+		$('html, body').animate({scrollTop: 0}, 600, function(){
+			$('.page').animate({left: -width}, 700, function(){
+				tempCur.find('.body-container').addClass('shrink');
+			});
+			//$(tempCur).animate({left: -width}, {duration: 700, queue: false});
+			//$(tempNew).animate({left: -width}, {duration: 700, queue: false});
+		});
+	}
+	else{
+		$('.page').animate({left: -width}, 700, function(){
+			tempCur.find('.body-container').addClass('shrink');
+		});
+		//$(tempNew).animate({left: -width}, {duration: 700, queue: false});
+	}
+	
 	//tempNew.css('left', -width);
-	showPage(newTab);
+	
 	
 	/*$(tempNew).promise().done(function(){
 		erasePages();
@@ -154,8 +184,9 @@ var shiftLeft = function(newTab){
 		tempNew.css('left', '0');
 		showPage(newTab);
 	});*/
+	old = current;
 	current = newTab;
-	
+	showPage(current);	
 };
 
 var shiftRight = function(newTab){
@@ -171,10 +202,25 @@ var shiftRight = function(newTab){
 	showPage(current);
 	//var widthCur = tempCur.width() + parseInt(tempCur.css('margin-right'));
 	//var widthNew = tempNew.width() + parseInt(tempCur.css('margin-left')) + parseInt(tempNew.css('margin-right'));
-	$(tempCur).animate({left: 0}, {duration: 700, queue: false});
-	$(tempNew).animate({left: 0}, {duration: 700, queue: false});
-	showPage(newTab);
+	var scrollDist = $(document).scrollTop();
+	if(scrollDist !== 0){
+		$('html, body').animate({scrollTop: 0}, 600, function(){
+			$('.page').animate({left: 0}, 700, function(){
+				tempCur.find('.body-container').addClass('shrink');
+			});
+			//$(tempNew).animate({left: 0}, {duration: 700, queue: false});
+		});
+	}
+	else{
+		$('.page').animate({left: 0}, 700, function(){
+			tempCur.find('.body-container').addClass('shrink');
+		});
+		//$(tempNew).animate({left: 0}, {duration: 700, queue: false});
+	}
+	
+	old = current;
 	current = newTab;
+	showPage(current);
 };
 
 var deselectTabs = function(){
