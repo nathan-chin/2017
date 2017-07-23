@@ -128,13 +128,9 @@ h1.intro-text {
 	border-radius: 100%;
 	margin: auto;
 	padding: auto;
-	animation: rotate 35s linear normal infinite;
+	animation: rotate 75s linear normal infinite;
 	border: 1px solid #191919;
 	box-shadow: -20px 0 75px 10px #191919 inset;
-}
-
-.world-container:hover {
-	animation-play-state: paused;
 }
 
 @keyframes rotate {
