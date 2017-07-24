@@ -12,7 +12,7 @@ $(document).ready(function(){
 	$('#home-tab').css('box-shadow', 'inset 0 0 2px #000000');
 	
 	$('#home-tab').click(function(){
-		if(ready === true){
+		if(ready){
 			if(current !== 0){
 				ready = false;
 				updatePage(0);
@@ -24,7 +24,7 @@ $(document).ready(function(){
 	});
 	
 	$('#about-tab').click(function(){
-		if(ready === true){
+		if(ready){
 			if(current !== 1){
 				ready = false;
 				updatePage(1);
@@ -36,7 +36,7 @@ $(document).ready(function(){
 	});
 	
 	$('#hobbies-tab').click(function(){
-		if(ready === true){
+		if(ready){
 			if(current !== 2){
 				ready = false;
 				updatePage(2);
@@ -48,7 +48,7 @@ $(document).ready(function(){
 	});
 	
 	$('#projects-tab').click(function(){
-		if(ready === true){
+		if(ready){
 			if(current !== 3){
 				ready = false;
 				updatePage(3);
@@ -60,7 +60,7 @@ $(document).ready(function(){
 	});
 	
 	$('#contact-tab').click(function(){
-		if(ready === true){
+		if(ready){
 			if(current !== 4){
 				ready = false;
 				updatePage(4);
@@ -76,7 +76,7 @@ var winHeight = $(window).height();
 var onlyOnce = true;
 $(window).scroll(function(){
 	var scrolls = $(window).scrollTop();
-	if(scrolls > winHeight){
+	if(scrolls > winHeight * 2){
 		if(onlyOnce){
 			window.scrollTo(0,0);
 		}
@@ -84,8 +84,8 @@ $(window).scroll(function(){
 		$('#intro-container').css('display', 'none');		
 	}
 	/*$('.world-container').css('bottom', (scrolls * -0.2) - 300);
-	$('.intro-text').css('bottom', scrolls * 0.6);
-	$('.stars').css('bottom', scrolls * -0.2);*/
+	$('.intro-text').css('bottom', scrolls * 0.6);*/
+	$('.stars').css('bottom', scrolls * -0.2);
 });
 
 var updatePage = function(newTab){
