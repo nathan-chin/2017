@@ -2,6 +2,7 @@
 var current = 0;
 var old;
 var notFirst = 0;
+var ready = true;
 
 $(document).ready(function(){
 	var pages = document.getElementsByClassName("page");
@@ -11,47 +12,62 @@ $(document).ready(function(){
 	$('#home-tab').css('box-shadow', 'inset 0 0 2px #000000');
 	
 	$('#home-tab').click(function(){
-		if(current !== 0){
-			updatePage(0);
-			deselectTabs();
-			$(this).css('background-color', '#393939');
-			$(this).css('box-shadow', 'inset 0 0 2px #000000');
+		if(ready === true){
+			if(current !== 0){
+				ready = false;
+				updatePage(0);
+				deselectTabs();
+				$(this).css('background-color', '#393939');
+				$(this).css('box-shadow', 'inset 0 0 2px #000000');
+			}
 		}
 	});
 	
 	$('#about-tab').click(function(){
-		if(current !== 1){
-			updatePage(1);
-			deselectTabs();
-			$(this).css('background-color', '#393939');
-			$(this).css('box-shadow', 'inset 0 0 2px #000000');
+		if(ready === true){
+			if(current !== 1){
+				ready = false;
+				updatePage(1);
+				deselectTabs();
+				$(this).css('background-color', '#393939');
+				$(this).css('box-shadow', 'inset 0 0 2px #000000');
+			}
 		}
 	});
 	
 	$('#hobbies-tab').click(function(){
-		if(current !== 2){
-			updatePage(2);
-			deselectTabs();
-			$(this).css('background-color', '#393939');
-			$(this).css('box-shadow', 'inset 0 0 2px #000000');
+		if(ready === true){
+			if(current !== 2){
+				ready = false;
+				updatePage(2);
+				deselectTabs();
+				$(this).css('background-color', '#393939');
+				$(this).css('box-shadow', 'inset 0 0 2px #000000');
+			}
 		}
 	});
 	
 	$('#projects-tab').click(function(){
-		if(current !== 3){
-			updatePage(3);
-			deselectTabs();
-			$(this).css('background-color', '#393939');
-			$(this).css('box-shadow', 'inset 0 0 2px #000000');
+		if(ready === true){
+			if(current !== 3){
+				ready = false;
+				updatePage(3);
+				deselectTabs();
+				$(this).css('background-color', '#393939');
+				$(this).css('box-shadow', 'inset 0 0 2px #000000');
+			}
 		}
 	});
 	
 	$('#contact-tab').click(function(){
-		if(current !== 4){
-			updatePage(4);
-			deselectTabs();
-			$(this).css('background-color', '#393939');
-			$(this).css('box-shadow', 'inset 0 0 2px #000000');
+		if(ready === true){
+			if(current !== 4){
+				ready = false;
+				updatePage(4);
+				deselectTabs();
+				$(this).css('background-color', '#393939');
+				$(this).css('box-shadow', 'inset 0 0 2px #000000');
+			}
 		}
 	});
 });
@@ -166,6 +182,7 @@ var shiftLeft = function(newTab){
 		$('html, body').animate({scrollTop: 0}, 600, function(){
 			$('.page').animate({left: -width}, 700, function(){
 				tempCur.find('.body-container').addClass('shrink');
+				ready = true;
 			});
 			//$(tempCur).animate({left: -width}, {duration: 700, queue: false});
 			//$(tempNew).animate({left: -width}, {duration: 700, queue: false});
@@ -174,6 +191,7 @@ var shiftLeft = function(newTab){
 	else{
 		$('.page').animate({left: -width}, 700, function(){
 			tempCur.find('.body-container').addClass('shrink');
+			ready = true;
 		});
 		//$(tempNew).animate({left: -width}, {duration: 700, queue: false});
 	}
@@ -210,6 +228,7 @@ var shiftRight = function(newTab){
 		$('html, body').animate({scrollTop: 0}, 600, function(){
 			$('.page').animate({left: 0}, 700, function(){
 				tempCur.find('.body-container').addClass('shrink');
+				ready = true;
 			});
 			//$(tempNew).animate({left: 0}, {duration: 700, queue: false});
 		});
@@ -217,6 +236,7 @@ var shiftRight = function(newTab){
 	else{
 		$('.page').animate({left: 0}, 700, function(){
 			tempCur.find('.body-container').addClass('shrink');
+			ready = true;
 		});
 		//$(tempNew).animate({left: 0}, {duration: 700, queue: false});
 	}
