@@ -21,7 +21,7 @@ body {
 	display: block;
 	margin: 0;
 	padding: 0;
-	height: 200vh;
+	height: 100vh;
 	width: 100%;
 	background: url("Stars_4.png");
 	background-size: cover;
@@ -153,10 +153,10 @@ h1.intro-text {
 	/*NAV BAR*/
 #nav-container {
 	text-align: center;
-	width: 100%;
+	max-width: 100%;
 	padding: 25px 0;
 	margin: 0 auto;
-	background: #191919;
+	background-color: transparent;
 	position: fixed;
 	position: -webkit-sticky;
   	position: -moz-sticky;
@@ -181,6 +181,7 @@ h1.intro-text {
 	padding: 6px;
     transition: all 0.5s cubic-bezier(.25,.8,.25,1);
 	border-radius: 1px;
+	text-decoration: none;
 }
 
 /*.nav-item:hover {
@@ -201,11 +202,11 @@ h1.intro-text {
 	vertical-align: top;
 	line-height: normal;
 }
-
+/*Max width: 1250px */
 .page {
 	text-align: center;
 	margin: 5% 10%;
-	background-color: whitesmoke;
+	background-color: #FFFFFF;
 	width: 80%;
 	border-radius: 2px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

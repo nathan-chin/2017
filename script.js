@@ -11,7 +11,8 @@ $(document).ready(function(){
 	$('#home-tab').css('background-color', '#393939');
 	$('#home-tab').css('box-shadow', 'inset 0 0 2px #000000');
 	
-	$('#home-tab').click(function(){
+	$('#home-tab').click(function(e){
+		e.preventDefault();
 		if(ready){
 			if(current !== 0){
 				ready = false;
@@ -23,7 +24,8 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('#about-tab').click(function(){
+	$('#about-tab').click(function(e){
+		e.preventDefault();
 		if(ready){
 			if(current !== 1){
 				ready = false;
@@ -35,7 +37,8 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('#hobbies-tab').click(function(){
+	$('#hobbies-tab').click(function(e){
+		e.preventDefault();
 		if(ready){
 			if(current !== 2){
 				ready = false;
@@ -47,7 +50,8 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('#projects-tab').click(function(){
+	$('#projects-tab').click(function(e){
+		e.preventDefault();
 		if(ready){
 			if(current !== 3){
 				ready = false;
@@ -59,7 +63,8 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('#contact-tab').click(function(){
+	$('#contact-tab').click(function(e){
+		e.preventDefault();
 		if(ready){
 			if(current !== 4){
 				ready = false;
@@ -72,11 +77,11 @@ $(document).ready(function(){
 	});
 });
 
-var winHeight = $(window).height();
+var winHeight = document.documentElement.clientHeight;
 var onlyOnce = true;
 $(window).scroll(function(){
 	var scrolls = $(window).scrollTop();
-	if(scrolls > winHeight * 2){
+	if(scrolls > winHeight){
 		if(onlyOnce){
 			window.scrollTo(0,0);
 		}
@@ -84,8 +89,9 @@ $(window).scroll(function(){
 		$('#intro-container').css('display', 'none');		
 	}
 	/*$('.world-container').css('bottom', (scrolls * -0.2) - 300);
-	$('.intro-text').css('bottom', scrolls * 0.6);*/
+	$('.intro-text').css('bottom', scrolls * 0.6);
 	$('.stars').css('bottom', scrolls * -0.2);
+});*/
 });
 
 var updatePage = function(newTab){
@@ -171,7 +177,8 @@ var shiftLeft = function(newTab){
 	var tempCur = getPage(current);
 	var tempNew = getPage(newTab);
 	
-	var width = $(window).width();
+	var width = $(window).width() + 4;
+	var height = $(window).outerHeight(true) + 1;
 	tempCur.css('left', 0);
 	tempNew.css('left', 0);
 	showPage(current);
@@ -216,7 +223,8 @@ var shiftRight = function(newTab){
 	var tempCur = getPage(current);
 	var tempNew = getPage(newTab);
 	
-	var width = $(window).width();
+	var width = $(window).width() + 4;
+	var height = $(window).outerHeight(true) + 1;
 	//$(tempNew).insertBefore(tempCur);
 	tempCur.css('left', -width);
 	tempNew.css('left', -width);
