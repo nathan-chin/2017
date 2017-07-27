@@ -14,6 +14,49 @@ body {
 	overflow-x: hidden;
 }
 
+.page-container {
+	
+}
+
+#home-section {
+	height: 100vh;
+}
+
+#section-title {
+	padding: 0;
+	margin: 0;
+}
+
+.title {
+	width: 100%;
+	margin: 0;
+}
+
+.about-title {
+	width: 100%;
+	background: red;
+}
+
+.hobbies-title {
+	width: 100%;
+	background: blue;
+}
+
+.projects-title {
+	width: 100%;
+	background: yellow;
+}
+
+.contact-title {
+	width: 100%;
+	background: black;
+}
+
+.shift-container {
+	top: 0;
+	z-index: 100;
+}
+
 /*INTRO PAGE*/
 #intro-container {
 	text-align: center;
@@ -23,11 +66,11 @@ body {
 	padding: 0;
 	height: 100vh;
 	width: 100%;
-	background: url("Stars_4.png");
+	/*background: url("Stars_4.png");
 	background-size: cover;
-	background-attachment: fixed;
+	background-attachment: fixed;*/
 	z-index: 1;
-	animation: big 10s linear normal infinite;
+	/*animation: big 10s linear normal infinite;*/
 }
 
 @keyframes big {
@@ -69,7 +112,7 @@ body {
 .intro-page {
 	color: whitesmoke;
 	text-align: center;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	display: block;
 	width: 100%;
 	left: 50%;
@@ -156,13 +199,14 @@ h1.intro-text {
 	max-width: 100%;
 	padding: 25px 0;
 	margin: 0 auto;
-	background-color: transparent;
-	position: fixed;
+	background-color: #171921;
+	position: relative;
+	/*position: fixed;
 	position: -webkit-sticky;
   	position: -moz-sticky;
     position: -ms-sticky;
     position: -o-sticky;
-	position: sticky;
+	position: sticky;*/
 	top: 0;
 	border-radius: 0 0 2px 2px;
 	z-index: 2;
