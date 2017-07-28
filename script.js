@@ -8,6 +8,10 @@ var aboutHeight, hobbiesHeight, projectsHeight, contactHeight;
 
 
 $(document).ready(function(){
+	/*var wHeight = $(window).height();
+	var wWidth = $(window).width();
+	$('#home-section').css('height', wHeight);
+	$('#home-section').css('width', wWidth);*/
 	aboutHeight = $('#about-title').offset().top + 24;
 	hobbiesHeight = $('#hobbies-title').offset().top + 24;
 	projectsHeight = $('#projects-title').offset().top + 24;
@@ -203,6 +207,7 @@ $(window).scroll(function(){
 	console.log("Position contact is " + $('#contact-title').css('position'));*/
 	winHeight = document.documentElement.clientHeight;
 	scrolls = $(window).scrollTop();
+	console.log(scrolls);
 	shiftHeight = $('.shift-container').height();
 	titleHeight = $('.title').outerHeight();
 	if(scrolls < aboutHeight){
@@ -245,16 +250,22 @@ $(window).scroll(function(){
 		$('#contact-title').addClass('snap');
 		$('.no-intro-container').css('padding-top', titleHeight);
 	}
-	if(hobbiesHeight - scrolls < 50){
-		$('#about-title').css('box-shadow', '0 0.125rem 0.3125rem rgba(0,0,0,0)');
+	if(hobbiesHeight - scrolls < 10){
+		console.log("one");
+		$('#about-title').css('box-shadow', 'none');
+		$('#about-title').css('background-color', 'limegreen'); //Change to color of hobbies section
 	}
 	else if(scrolls < hobbiesHeight && scrolls > aboutHeight){
+		console.log("two");
 		$('#about-title').css('box-shadow', '0 0.125rem 0.3125rem rgba(0,0,0,0.3)');
+		$('#about-title').css('background-color', 'orange'); //Change to color of about section
 	}
 	else{
-		$('#about-title').css('box-shadow', '0 0.125rem 0.3125rem rgba(0,0,0,0)');
+		console.log("three");
+		$('#about-title').css('box-shadow', 'none');
+		$('#about-title').css('background-color', 'orange'); //Change to color of about section
 	}
-	if(projectsHeight - scrolls < 50){
+	if(projectsHeight - scrolls < 10){
 		$('#hobbies-title').css('box-shadow', '0 0.125rem 0.3125rem rgba(0,0,0,0)');
 	}
 	else if(scrolls < projectsHeight && scrolls > hobbiesHeight){
@@ -263,7 +274,7 @@ $(window).scroll(function(){
 	else{
 		$('#hobbies-title').css('box-shadow', '0 0.125rem 0.3125rem rgba(0,0,0,0)');
 	}
-	if(contactHeight - scrolls < 50){
+	if(contactHeight - scrolls < 10){
 		$('#projects-title').css('box-shadow', '0 0.125rem 0.3125rem rgba(0,0,0,0)');
 	}
 	else if(scrolls < contactHeight && scrolls > projectsHeight){
