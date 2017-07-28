@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
   <link href="style.css" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="script.js" type= "text/javascript"></script>
   <title>Nathan Chin | Software Engineer</title>
  </head>
@@ -29,10 +29,11 @@
      <h2 class="home-page-subtitle">Software Engineer - UT Austin</h2>
     </div>
   </div>
-  <div id="section-title" class="about-title">
-  	<h1 class="title">About</h1>
+  <div class="section-title">
+  	<h1 class="title" id="about-title">About</h1>
   </div>
-  <div class="page-container" id="about-page">
+  <div class='no-intro-container'>
+  <div class="page-container" id="about-section">
      <img src="Nathan-About.png" class="portrait-container">
      <h1 class="page-title">Allow me to {chin}troduce myself</h1>
      <h2 class="page-subtitle">We can skip the handshake this time</h2>
@@ -50,10 +51,10 @@ To be true, this doesn't mean that China is girding up for war. As things stand,
 In 2012, India and China agreed that the tri-junction boundaries with Bhutan and Myanmar (also called Burma) would be finally decided in consultation with these countries. Until then, the status quo would prevail.</p>
      </div>
     </div>
-    <div id="section-title" class="hobbies-title">
-  	<h1 class="title">Hobbies</h1>
-  </div>
-    <div class="page-container">
+    <div class="section-title">
+  	<h1 class="title" id="hobbies-title">Hobbies</h1>
+    </div>
+    <div class="page-container" id="hobbies-section">
    	 <img src="Nathan-Hobbies.png" class="portrait-container">
    	 <h1 class="page-title">Stuff that I'm {chin}terested in</h1>
    	 <h2 class="page-subtitle">Should puns be first on this list?</h2>
@@ -61,8 +62,8 @@ In 2012, India and China agreed that the tri-junction boundaries with Bhutan and
       <h3>The most important thing I love to do is learn.</h3>
      </div>
     </div>
-  <div id="section-title" class="projects-title">
-  	<h1 class="title">Projects</h1>
+  <div class="section-title">
+  	<h1 class="title" id="projects-title">Projects</h1>
   </div>
   <div class="shift-container">
   	<div id="nav-container">
@@ -126,14 +127,15 @@ In 2012, India and China agreed that the tri-junction boundaries with Bhutan and
      	
    </div>
   </div>
-  <div id="section-title" class="contact-title">
-  	<h1 class="title">Contact</h1>
+  <div class="section-title">
+  	<h1 class="title" id="contact-title">Contact</h1>
   </div>
-  <div class="page-container">
+  <div class="page-container" id="contact-section">
      <img src="Nathan-Contact.png" class="portrait-container">
      <h1 class="page-title">Thanks for cat{chin} up with me!</h1>
      <h2 class="page-subtitle">Here's my card</h2>
 	 <div class="contact-card"></div>
+  </div>
   </div>
  </body>
 </html>

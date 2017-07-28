@@ -15,11 +15,24 @@ body {
 }
 
 .page-container {
-	
+	z-index: 5;
 }
 
 #home-section {
 	height: 100vh;
+	text-align: center;
+}
+
+#about-section {
+	text-align: center;
+}
+
+#hobbies-section {
+	text-align: center;
+}
+
+#contact-section {
+	text-align: center;
 }
 
 #section-title {
@@ -28,28 +41,47 @@ body {
 }
 
 .title {
+	position: relative;
+	text-align: center;
 	width: 100%;
 	margin: 0;
+	padding: 24px 0 0 0;
+	box-sizing: border-box;
+	top: 0;
+	z-index: 3;
+	box-shadow: none;
 }
 
-.about-title {
+.snap {
+	transition: box-shadow 0.2s ease-in-out;
+	box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,.3);
+	position: fixed;
+	top: -24px;
+	z-index: 0;
+}
+
+#about-title {
 	width: 100%;
-	background: red;
+	background-color: white;
+	z-index: 0;
 }
 
-.hobbies-title {
+#hobbies-title {
 	width: 100%;
-	background: blue;
+	background: white;
+	z-index: 0;
 }
 
-.projects-title {
+#projects-title {
 	width: 100%;
 	background: yellow;
+	z-index: 0;
 }
 
-.contact-title {
+#contact-title {
 	width: 100%;
 	background: black;
+	z-index: 0;
 }
 
 .shift-container {
@@ -187,7 +219,7 @@ h1.intro-text {
 #no-intro-container {
 	background: linear-gradient(to bottom, #33FFBD, #26FF3E);
 	background-attachment: fixed;
-	z-index: 10;
+	z-index: 1;
 	padding-bottom: 5px;
 	text-align: center;
 	position: relative;
@@ -209,7 +241,7 @@ h1.intro-text {
 	position: sticky;*/
 	top: 0;
 	border-radius: 0 0 2px 2px;
-	z-index: 2;
+	z-index: 1;
 	box-shadow: 0 12px 8px -8px rgba(0, 0, 0, 0.2), 0 12px 10px -10px rgba(0, 0, 0, 0.19);
 }
 
@@ -246,7 +278,7 @@ h1.intro-text {
 	vertical-align: top;
 	line-height: normal;
 }
-/*Max width: 1250px */
+/*Max width: 1280px */
 .page {
 	text-align: center;
 	margin: 5% 10%;
