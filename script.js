@@ -6,12 +6,12 @@ var ready = true;
 var winHeight, scrolls, shiftHeight, titleHeight;
 var aboutHeight, hobbiesHeight, projectsHeight, contactHeight;
 
-
 $(document).ready(function(){
 	/*var wHeight = $(window).height();
 	var wWidth = $(window).width();
 	$('#home-section').css('height', wHeight);
 	$('#home-section').css('width', wWidth);*/
+	$('#nav-container').hide();
 	aboutHeight = $('#about-title').offset().top + 24;
 	hobbiesHeight = $('#hobbies-title').offset().top + 24;
 	projectsHeight = $('#projects-title').offset().top + 24;
@@ -45,6 +45,7 @@ $(document).ready(function(){
 				$(this).css('background-color', '#393939');
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
 			}
+			$('#nav-container').hide();
 		}
 	});
 	
@@ -58,6 +59,7 @@ $(document).ready(function(){
 				$(this).css('background-color', '#393939');
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
 			}
+			$('#nav-container').hide();
 		}
 	});
 	
@@ -71,6 +73,7 @@ $(document).ready(function(){
 				$(this).css('background-color', '#393939');
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
 			}
+			$('#nav-container').hide();
 		}
 	});
 	
@@ -86,6 +89,12 @@ $(document).ready(function(){
 			}
 		}
 	});*/
+	$('.menu-button').click(function(){
+		$('#nav-container').toggle();
+		setTimeout(function(){
+			$('#nav-container').fadeOut(500);
+		}, 4000);
+	});
 });
 
 window.addEventListener('resize', function(e){

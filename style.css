@@ -19,19 +19,19 @@ body {
 }
 
 #about-pic {
-	background-color: #887BA2;
+	background-color: #5E5E5E;
 }
 
 #hobbies-pic {
-	background-color: #262829;
+	background-color: #B9292D;
 }
 
 #projects-pic {
-	
+	background-color: #5E5E5E;
 }
 
 #contact-pic {
-	
+	background-color: #EFC11C;
 }
 
 .page-container {
@@ -61,7 +61,7 @@ body {
 
 .section-about {
 	width: 80%;
-	background-color: #FFF;
+	background-color: #EEEEEE;
 	padding: 0;
 	margin: 0 10%;
 	top: 0;
@@ -71,19 +71,29 @@ body {
 
 .section-hobbies {
 	width: 80%;
-	background-color: #FF5559;
+	background-color: #E33539;
+	/*#FF5559*/
 	padding: 0;
 	margin: 0 10%;
 	top: 0;
 	left: 0;
-	color: #212121;
+	color: #FAFAFA;
+}
+
+.section-projects {
+	width: 80%;
+	background-color: #EEEEEE;
+	padding: 0;
+	margin: 0 10%;
+	top: 0;
+	left: 0;
 }
 
 #about-section {
 	padding: 5% 0;
 	margin: 0;
 	text-align: center;
-	background: #EEEEEE;
+	background-color: #EEEEEE;
 }
 
 #hobbies-section {
@@ -91,6 +101,13 @@ body {
 	background-color: #E33539;
 	padding: 5% 0;
 	margin: 0;
+}
+
+#projects-section {
+	text-align: center;
+	padding: 5% 0;
+	margin: 0;
+	background-color: #EEEEEE;
 }
 
 #contact-section {
@@ -155,31 +172,35 @@ body {
 #about-title {
 	width: 100%;
 	background-color: #EEEEEE;
-	z-index: 0;color: #262829;
+	z-index: 10;
+	color: #262829;
 }
 
 #hobbies-title {
 	width: 100%;
 	background-color: #E33539;
-	z-index: 0;
+	z-index: 10;
+	color: #FAFAFA;
 }
 
 #projects-title {
 	width: 100%;
 	background: #EEEEEE;
-	z-index: 0;
+	z-index: 10;
 }
 
 #contact-title {
 	width: 100%;
 	background: #F6D14B;
-	z-index: 0;
+	z-index: 10;
 	color: #FAFAFA;
 }
 
-.shift-container {
-	top: 0;
-	z-index: 100;
+.menu-button {
+	background-color: #1D1D1D;
+	z-index: 10;
+	margin: 10px 0;
+	width: 50px;
 }
 
 /*INTRO PAGE*/
@@ -321,20 +342,21 @@ h1.intro-text {
 	/*NAV BAR*/
 #nav-container {
 	text-align: center;
-	max-width: 100%;
-	padding: 25px 0;
+	padding: 0 0;
 	margin: 0 auto;
 	background-color: #171921;
-	position: relative;
+	width: 300px;
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
 	/*position: fixed;
 	position: -webkit-sticky;
   	position: -moz-sticky;
     position: -ms-sticky;
     position: -o-sticky;
 	position: sticky;*/
-	top: 0;
 	border-radius: 0 0 2px 2px;
-	z-index: 1;
+	z-index: 5;
 	box-shadow: 0 12px 8px -8px rgba(0, 0, 0, 0.2), 0 12px 10px -10px rgba(0, 0, 0, 0.19);
 }
 
@@ -351,6 +373,7 @@ h1.intro-text {
     transition: all 0.5s cubic-bezier(.25,.8,.25,1);
 	border-radius: 1px;
 	text-decoration: none;
+	display: block;
 }
 
 /*.nav-item:hover {
