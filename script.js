@@ -89,11 +89,22 @@ $(document).ready(function(){
 			}
 		}
 	});*/
+	var timeHandle;
+	var popFade = function(){
+		$('#nav-container').fadeOut(500);
+	};
+	
 	$('.menu-button').click(function(){
 		$('#nav-container').toggle();
-		setTimeout(function(){
-			$('#nav-container').fadeOut(500);
-		}, 4000);
+		timeHandle = setTimeout(popFade, 4000);
+	});
+	
+	$('#nav-container').mouseenter(function(){
+		clearTimeout(timeHandle);
+	});
+	
+	$('#nav-container').mouseleave(function(){
+		timeHandle = setTimeout(popFade, 4000);
 	});
 });
 
