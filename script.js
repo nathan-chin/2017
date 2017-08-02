@@ -11,7 +11,6 @@ $(document).ready(function(){
 	var wWidth = $(window).width();
 	$('#home-section').css('height', wHeight);
 	$('#home-section').css('width', wWidth);*/
-	$('#nav-container').css('display', 'none');
 	aboutHeight = $('#about-title').offset().top + 24;
 	hobbiesHeight = $('#hobbies-title').offset().top + 24;
 	projectsHeight = $('#projects-title').offset().top + 24;
@@ -74,6 +73,17 @@ $(document).ready(function(){
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
 			}
 			$('#nav-container').hide();
+		}
+	});
+	
+	$('.nav-button').click(function(){
+		if($('#open-nav').css('width') === '0px'){
+			$('#open-nav').css('width', '280px');
+			$('.nav-menu-item').css('display', 'block');
+		}
+		else{
+			$('#open-nav').css('width', '0px');
+			$('.nav-menu-item').css('display', 'none');
 		}
 	});
 	
