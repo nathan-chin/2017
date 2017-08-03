@@ -79,11 +79,9 @@ $(document).ready(function(){
 	$('.nav-button').click(function(){
 		if($('#open-nav').css('width') === '0px'){
 			$('#open-nav').css('width', '280px');
-			$('.nav-menu-item').css('display', 'block');
 		}
 		else{
 			$('#open-nav').css('width', '0px');
-			$('.nav-menu-item').css('display', 'none');
 		}
 	});
 	
