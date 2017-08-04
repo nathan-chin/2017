@@ -85,6 +85,15 @@ $(document).ready(function(){
 		}
 	});
 	
+	$('.info-button').click(function(){
+		if($('#open-info').css('width') === '0px'){
+			$('#open-info').css('width', '280px');
+		}
+		else{
+			$('#open-info').css('width', '0px');
+		}
+	});
+	
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		setInterval(function(){
 			if($('#about-title')[0].getBoundingClientRect().top === -24){
@@ -94,6 +103,21 @@ $(document).ready(function(){
 			else
 				$('#about-title').css('box-shadow', 'none');
 		}, 100);
+		$('.nav-menu-item').click(function(){
+			clearSelectMenu();
+			$(this).css('background-color', '#4A4E50');
+			$(this).css('color', '#FAFAFA');
+		});
+	}
+	else{
+		$('.nav-menu-item').click(function(e){
+		var temp = $(e.target).attr('href');
+		$('html, body').animate({scrollTop: $(temp).offset().top + 'px'}, 1000);
+		$('html').scrollTop($(temp).offset().top + 'px');
+		e.preventDefault();
+		clearSelectMenu();
+		$(this).css('background-color', '#4A4E50');
+	});
 	}
 	
 	/*$('#contact-tab').click(function(e){
@@ -532,6 +556,10 @@ var stickTitles = function(position){
 	else{
 		$('#projects-title').css('box-shadow', '0 0.125rem 0.3125rem rgba(0,0,0,0)');
 	}
+};
+
+var clearSelectMenu = function(){
+	$('.nav-menu-item').css('background-color', '#262829');
 };
 
 

@@ -21,6 +21,29 @@ body {
 	z-index: 100;
 	opacity: 0.4;
 }
+
+.info-container {
+	height: 100vh;
+	width: 0;
+	top: 0px;
+	right: 0px;
+	position: fixed;
+	background-color: #262829;
+	z-index: 99;
+	transition: 0.6s ease;
+	text-align: center;
+	overflow-x: hidden;
+}
+
+.info-content {
+	margin-top: 100px;
+	padding: 10px;
+	text-decoration: none;
+	color: #FAFAFA;
+	display: block;
+	width: 260px;
+}
+
 .nav-button {
 	width: 30px;
 	position: fixed;
@@ -48,10 +71,19 @@ body {
 }
 
 .nav-menu-item {
+	text-align: center;
 	padding: 10px;
 	text-decoration: none;
 	color: #FAFAFA;
 	display: block;
+}
+
+.nav-menu-item:first-child {
+	margin-top: 100px;
+}
+
+.nav-menu-item:hover {
+	color: #FDAE24;
 }
 
 #welcome-pic {
