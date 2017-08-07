@@ -22,8 +22,8 @@ $(document).ready(function(){
 	var pages = document.getElementsByClassName("page");
 	erasePages();
 	showPage(current);
-	$('#project-1-tab').css('background-color', '#393939');
-	$('#project-1-tab').css('box-shadow', 'inset 0 0 2px #000000');
+	$('#project-intro-tab').css('background-color', '#393939');
+	$('#project-intro-tab').css('box-shadow', 'inset 0 0 2px #000000');
 	
 	/*$('#home-tab').click(function(e){
 		e.preventDefault();
@@ -39,7 +39,7 @@ $(document).ready(function(){
 	});*/
 	
 	//Perform when the #about-tab is clicked
-	$('#project-1-tab').click(function(e){
+	$('#project-intro-tab').click(function(e){
 		e.preventDefault();
 		if(ready){
 			if(current !== 0){
@@ -53,7 +53,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('#project-2-tab').click(function(e){
+	$('#project-1-tab').click(function(e){
 		e.preventDefault();
 		if(ready){
 			if(current !== 1){
@@ -67,7 +67,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('#project-3-tab').click(function(e){
+	$('#project-2-tab').click(function(e){
 		e.preventDefault();
 		if(ready){
 			if(current !== 2){
@@ -81,7 +81,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('#project-4-tab').click(function(e){
+	$('#project-3-tab').click(function(e){
 		e.preventDefault();
 		if(ready){
 			if(current !== 3){
@@ -95,12 +95,26 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('#project-5-tab').click(function(e){
+	$('#project-4-tab').click(function(e){
 		e.preventDefault();
 		if(ready){
 			if(current !== 4){
 				ready = false;
 				updatePage(4);
+				deselectTabs();
+				$(this).css('background-color', '#393939');
+				$(this).css('box-shadow', 'inset 0 0 2px #000000');
+			}
+			$('#nav-container').hide();
+		}
+	});
+	
+	$('#project-5-tab').click(function(e){
+		e.preventDefault();
+		if(ready){
+			if(current !== 5){
+				ready = false;
+				updatePage(5);
 				deselectTabs();
 				$(this).css('background-color', '#393939');
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
@@ -416,6 +430,7 @@ var getPage = function(num){
 	//var hobbies = $('#hobbies');
 	//var projects = $('#projects');
 	//var contact = $('#contact');
+	var projectIntro = $('#project-intro');
 	var project1 = $('#project-1');
 	var project2 = $('#project-2');
 	var project3 = $('#project-3');
@@ -423,14 +438,16 @@ var getPage = function(num){
 	var project5 = $('#project-5');
 	switch(num){
 		case 0:
-			return project1;
+			return projectIntro;
 		case 1:
-			return project2;
+			return project1;
 		case 2:
-			return project3;
+			return project2;
 		case 3:
-			return project4;
+			return project3;
 		case 4:
+			return project4;
+		case 5:
 			return project5;
 	}
 };
@@ -522,6 +539,8 @@ var shiftRight = function(newTab){
 var deselectTabs = function(){
 	//$('#home-tab').css('background-color', 'inherit');
 	//$('#home-tab').css('box-shadow', 'none');
+	$('#project-intro-tab').css('background-color', 'inherit');
+	$('#project-intro-tab').css('box-shadow', 'none');
 	$('#project-1-tab').css('background-color', 'inherit');
 	$('#project-1-tab').css('box-shadow', 'none');
 	$('#project-2-tab').css('background-color', 'inherit');

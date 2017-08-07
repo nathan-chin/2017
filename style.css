@@ -434,10 +434,10 @@ h1.intro-text {
 
 
 /*ACTUAL WEBSITE CONTENT*/
-#no-intro-container {
+#projects-container {
 	/*background: linear-gradient(to bottom, #33FFBD, #26FF3E);
 	background-attachment: fixed;*/
-	background-color: #FDAE24; /*#FDAE24 - nice orange color I just randomly made*/
+	background-color: #EEEEEE; /*#FDAE24 - nice orange color I just randomly made*/
 	z-index: 1;
 	padding-bottom: 5px;
 	text-align: center;
