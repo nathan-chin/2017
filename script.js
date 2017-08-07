@@ -22,8 +22,8 @@ $(document).ready(function(){
 	var pages = document.getElementsByClassName("page");
 	erasePages();
 	showPage(current);
-	$('#about-tab').css('background-color', '#393939');
-	$('#about-tab').css('box-shadow', 'inset 0 0 2px #000000');
+	$('#project-1-tab').css('background-color', '#393939');
+	$('#project-1-tab').css('box-shadow', 'inset 0 0 2px #000000');
 	
 	/*$('#home-tab').click(function(e){
 		e.preventDefault();
@@ -39,7 +39,7 @@ $(document).ready(function(){
 	});*/
 	
 	//Perform when the #about-tab is clicked
-	$('#about-tab').click(function(e){
+	$('#project-1-tab').click(function(e){
 		e.preventDefault();
 		if(ready){
 			if(current !== 0){
@@ -53,7 +53,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('#hobbies-tab').click(function(e){
+	$('#project-2-tab').click(function(e){
 		e.preventDefault();
 		if(ready){
 			if(current !== 1){
@@ -67,12 +67,40 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('#projects-tab').click(function(e){
+	$('#project-3-tab').click(function(e){
 		e.preventDefault();
 		if(ready){
 			if(current !== 2){
 				ready = false;
 				updatePage(2);
+				deselectTabs();
+				$(this).css('background-color', '#393939');
+				$(this).css('box-shadow', 'inset 0 0 2px #000000');
+			}
+			$('#nav-container').hide();
+		}
+	});
+	
+	$('#project-4-tab').click(function(e){
+		e.preventDefault();
+		if(ready){
+			if(current !== 3){
+				ready = false;
+				updatePage(3);
+				deselectTabs();
+				$(this).css('background-color', '#393939');
+				$(this).css('box-shadow', 'inset 0 0 2px #000000');
+			}
+			$('#nav-container').hide();
+		}
+	});
+	
+	$('#project-5-tab').click(function(e){
+		e.preventDefault();
+		if(ready){
+			if(current !== 4){
+				ready = false;
+				updatePage(4);
 				deselectTabs();
 				$(this).css('background-color', '#393939');
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
@@ -120,6 +148,11 @@ $(document).ready(function(){
 			clearSelectMenu();
 			$(this).css('background-color', '#4A4E50');
 			$(this).css('color', '#FAFAFA');
+			setTimeout(function(){
+				$('#open-nav').css('left', '-280px');
+				$('#black-nav').fadeIn();
+				$('#white-nav').fadeOut();
+			}, 200);
 		});
 	}
 	else{
@@ -145,12 +178,13 @@ $(document).ready(function(){
 			}
 		}
 	});*/
-	var timeHandle;
+	var timeHandleMenu;
 	var popFade = function(){
 		$('#nav-container').fadeOut(500);
 	};
 	
 	$('.menu-button').click(function(){
+		clearTimeout(timeHandleMenu);
 		if($('#nav-container').css('display') === 'none'){
 			$('#nav-container').css('display', 'block');
 		}
@@ -158,15 +192,15 @@ $(document).ready(function(){
 			$('#nav-container').css('display', 'none');
 		}
 		//$('#nav-container').toggle();
-		timeHandle = setTimeout(popFade, 4000);
+		timeHandleMenu = setTimeout(popFade, 4000);
 	});
 	
 	$('#nav-container').mouseenter(function(){
-		clearTimeout(timeHandle);
+		clearTimeout(timeHandleMenu);
 	});
 	
 	$('#nav-container').mouseleave(function(){
-		timeHandle = setTimeout(popFade, 4000);
+		timeHandleMenu = setTimeout(popFade, 4000);
 	});
 	
 	$(".logo").click(function(){
@@ -378,17 +412,26 @@ var getCurPage = function(){
 
 var getPage = function(num){
 	//var home = $('#home');
-	var about_me = $('#about-me');
-	var hobbies = $('#hobbies');
-	var projects = $('#projects');
+	//var about_me = $('#about-me');
+	//var hobbies = $('#hobbies');
+	//var projects = $('#projects');
 	//var contact = $('#contact');
+	var project1 = $('#project-1');
+	var project2 = $('#project-2');
+	var project3 = $('#project-3');
+	var project4 = $('#project-4');
+	var project5 = $('#project-5');
 	switch(num){
 		case 0:
-			return about_me;
+			return project1;
 		case 1:
-			return hobbies;
+			return project2;
 		case 2:
-			return projects;
+			return project3;
+		case 3:
+			return project4;
+		case 4:
+			return project5;
 	}
 };
 
@@ -479,12 +522,16 @@ var shiftRight = function(newTab){
 var deselectTabs = function(){
 	//$('#home-tab').css('background-color', 'inherit');
 	//$('#home-tab').css('box-shadow', 'none');
-	$('#about-tab').css('background-color', 'inherit');
-	$('#about-tab').css('box-shadow', 'none');
-	$('#hobbies-tab').css('background-color', 'inherit');
-	$('#hobbies-tab').css('box-shadow', 'none');
-	$('#projects-tab').css('background-color', 'inherit');
-	$('#projects-tab').css('box-shadow', 'none');
+	$('#project-1-tab').css('background-color', 'inherit');
+	$('#project-1-tab').css('box-shadow', 'none');
+	$('#project-2-tab').css('background-color', 'inherit');
+	$('#project-2-tab').css('box-shadow', 'none');
+	$('#project-3-tab').css('background-color', 'inherit');
+	$('#project-3-tab').css('box-shadow', 'none');
+	$('#project-4-tab').css('background-color', 'inherit');
+	$('#project-4-tab').css('box-shadow', 'none');
+	$('#project-5-tab').css('background-color', 'inherit');
+	$('#project-5-tab').css('box-shadow', 'none');
 	//$('#contact-tab').css('background-color', 'inherit');
 	//$('#contact-tab').css('box-shadow', 'none');
 };
