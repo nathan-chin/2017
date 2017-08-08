@@ -20,10 +20,11 @@ $(document).ready(function(){
 	projectsHeight = $('#projects-title').offset().top + 24;
 	contactHeight = $('#contact-title').offset().top + 24;
 	var pages = document.getElementsByClassName("page");
+	$('.page-totals').text("| " + pages.length);
 	erasePages();
 	showPage(current);
-	$('#project-intro-tab').css('background-color', '#393939');
-	$('#project-intro-tab').css('box-shadow', 'inset 0 0 2px #000000');
+	$('#project-1-tab').css('background-color', '#393939');
+	$('#project-1-tab').css('box-shadow', 'inset 0 0 2px #000000');
 	
 	/*$('#home-tab').click(function(e){
 		e.preventDefault();
@@ -39,7 +40,8 @@ $(document).ready(function(){
 	});*/
 	
 	//Perform when the #about-tab is clicked
-	$('#project-intro-tab').click(function(e){
+	
+	$('#project-1-tab').click(function(e){
 		e.preventDefault();
 		if(ready){
 			if(current !== 0){
@@ -48,20 +50,7 @@ $(document).ready(function(){
 				deselectTabs();
 				$(this).css('background-color', '#393939');
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
-			}
-			$('#nav-container').hide();
-		}
-	});
-	
-	$('#project-1-tab').click(function(e){
-		e.preventDefault();
-		if(ready){
-			if(current !== 1){
-				ready = false;
-				updatePage(1);
-				deselectTabs();
-				$(this).css('background-color', '#393939');
-				$(this).css('box-shadow', 'inset 0 0 2px #000000');
+				$('.page-number').text(1);
 			}
 			$('#nav-container').hide();
 		}
@@ -70,12 +59,13 @@ $(document).ready(function(){
 	$('#project-2-tab').click(function(e){
 		e.preventDefault();
 		if(ready){
-			if(current !== 2){
+			if(current !== 1){
 				ready = false;
-				updatePage(2);
+				updatePage(1);
 				deselectTabs();
 				$(this).css('background-color', '#393939');
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
+				$('.page-number').text(2);
 			}
 			$('#nav-container').hide();
 		}
@@ -84,12 +74,13 @@ $(document).ready(function(){
 	$('#project-3-tab').click(function(e){
 		e.preventDefault();
 		if(ready){
-			if(current !== 3){
+			if(current !== 2){
 				ready = false;
-				updatePage(3);
+				updatePage(2);
 				deselectTabs();
 				$(this).css('background-color', '#393939');
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
+				$('.page-number').text(3);
 			}
 			$('#nav-container').hide();
 		}
@@ -98,12 +89,13 @@ $(document).ready(function(){
 	$('#project-4-tab').click(function(e){
 		e.preventDefault();
 		if(ready){
-			if(current !== 4){
+			if(current !== 3){
 				ready = false;
-				updatePage(4);
+				updatePage(3);
 				deselectTabs();
 				$(this).css('background-color', '#393939');
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
+				$('.page-number').text(4);
 			}
 			$('#nav-container').hide();
 		}
@@ -112,12 +104,13 @@ $(document).ready(function(){
 	$('#project-5-tab').click(function(e){
 		e.preventDefault();
 		if(ready){
-			if(current !== 5){
+			if(current !== 4){
 				ready = false;
-				updatePage(5);
+				updatePage(4);
 				deselectTabs();
 				$(this).css('background-color', '#393939');
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
+				$('.page-number').text(5);
 			}
 			$('#nav-container').hide();
 		}
@@ -171,9 +164,9 @@ $(document).ready(function(){
 	}
 	else{
 		$('.nav-menu-item').click(function(e){
-			var temp = $(e.target).attr('href');
-			$('html, body').animate({scrollTop: $(temp).offset().top + 'px'}, 1000);
-			$('html').scrollTop($(temp).offset().top + 'px');
+			var link = $(e.target).attr('href');
+			$('html, body').animate({scrollTop: $(link).offset().top + 'px'}, 1000);
+			$('html').scrollTop($(link).offset().top + 'px');
 			e.preventDefault();
 			//clearSelectMenu();
 			//$(this).css('background-color', '#4A4E50');
@@ -430,7 +423,6 @@ var getPage = function(num){
 	//var hobbies = $('#hobbies');
 	//var projects = $('#projects');
 	//var contact = $('#contact');
-	var projectIntro = $('#project-intro');
 	var project1 = $('#project-1');
 	var project2 = $('#project-2');
 	var project3 = $('#project-3');
@@ -438,16 +430,14 @@ var getPage = function(num){
 	var project5 = $('#project-5');
 	switch(num){
 		case 0:
-			return projectIntro;
-		case 1:
 			return project1;
-		case 2:
+		case 1:
 			return project2;
-		case 3:
+		case 2:
 			return project3;
-		case 4:
+		case 3:
 			return project4;
-		case 5:
+		case 4:
 			return project5;
 	}
 };
@@ -539,8 +529,6 @@ var shiftRight = function(newTab){
 var deselectTabs = function(){
 	//$('#home-tab').css('background-color', 'inherit');
 	//$('#home-tab').css('box-shadow', 'none');
-	$('#project-intro-tab').css('background-color', 'inherit');
-	$('#project-intro-tab').css('box-shadow', 'none');
 	$('#project-1-tab').css('background-color', 'inherit');
 	$('#project-1-tab').css('box-shadow', 'none');
 	$('#project-2-tab').css('background-color', 'inherit');

@@ -100,26 +100,6 @@ body {
 	color: #FDAE24;
 }
 
-#welcome-pic {
-	background-color: #3764B4;
-}
-
-#about-pic {
-	background-color: #5E5E5E;
-}
-
-#hobbies-pic {
-	background-color: #B9292D;
-}
-
-#projects-pic {
-	background-color: #5E5E5E;
-}
-
-#contact-pic {
-	background-color: #EFC11C;
-}
-
 .page-container {
 	z-index: 5;
 }
@@ -295,12 +275,42 @@ body {
 	color: #FAFAFA;
 }
 
-.menu-button {
-	background-color: #1D1D1D;
+.menu-container {
+	text-align: center;
+	height: auto;
+	padding: 0;
+	background-color: #EEEEEE;
+}
+
+/*.menu-button {
 	z-index: 10;
-	margin: 10px 0 0;
+	margin: 0;
 	width: 50px;
 	border-radius: 3px;
+}*/
+
+.menu-button {
+	text-align: center;
+	padding: 10px;
+	margin: auto;
+	width: 80px;
+	z-index: 3000;
+}
+
+.menu-button:hover {
+	background-color: #EF5FFF;
+}
+
+.page-number {
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+}
+
+.page-totals {
+	padding: 0;
+	margin: 0;
+	display: inline-block;
 }
 
 .menu {
@@ -475,7 +485,7 @@ h1.intro-text {
 	text-align: center;
 	color: whitesmoke;
 	font-weight: bold;
-	margin: 20px 5px;
+	margin: 0 5px;
 	padding: 6px;
     transition: all 0.5s cubic-bezier(.25,.8,.25,1);
 	border-radius: 1px;
@@ -490,25 +500,25 @@ h1.intro-text {
 }*/
 
 	/*WEBSITE PAGES*/
-#page-container {
+#projects-view {
 	text-align: center;
 	display: block;
 	white-space: nowrap;
-	
+	padding: 0 0 30px;
 }
 
-#page-container * {
+#projects-view * {
 	vertical-align: top;
 	line-height: normal;
 }
 /*Max width: 1280px */
 .page {
 	text-align: center;
-	margin: 5% 10%;
+	margin: 0 10% 5%;
 	background-color: #EEEEEE;
 	width: 80%;
-	/*border-radius: 2px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+	border-radius: 2px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	display: inline-block;
 	position: relative;
 	white-space: normal;
@@ -526,6 +536,26 @@ h1.intro-text {
 	z-index: 1;
 	/*position: sticky;
 	top: 10px;*/
+}
+
+#welcome-pic {
+	background-color: #3764B4;
+}
+
+#about-pic {
+	background-color: #5E5E5E;
+}
+
+#hobbies-pic {
+	background-color: #B9292D;
+}
+
+#projects-pic {
+	background-color: #5E5E5E;
+}
+
+#contact-pic {
+	background-color: #EFC11C;
 }
 
 /*.portrait-container:hover {
