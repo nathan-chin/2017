@@ -116,6 +116,10 @@ $(document).ready(function(){
 		}
 	});
 	
+	$('.read-button').click(function(){
+		$('.details-container').show();
+	});
+	
 	$('.nav-button').click(function(){
 		if($('#open-nav').css('left') === '-280px'){
 			$('#black-nav').fadeOut();
