@@ -7,6 +7,9 @@ var notFirst = 0;
 var ready = true;
 var winHeight, scrolls, shiftHeight, titleHeight;
 var aboutHeight, hobbiesHeight, projectsHeight, contactHeight;
+var scrollDist = 0;
+var curLogo = 1;
+var maxScroll;
 
 //Perform as soon as the website has loaded
 $(document).ready(function(){
@@ -14,6 +17,9 @@ $(document).ready(function(){
 	var wWidth = $(window).width();
 	$('#home-section').css('height', wHeight);
 	$('#home-section').css('width', wWidth);*/
+	$('.tools-container').scrollLeft(999999);
+	maxScroll = $('.tools-container').scrollLeft();
+	$('.tools-container').scrollLeft(0);
 	$('#start-nav').css('background-color', '#4A4E50');
 	aboutHeight = $('#about-title').offset().top + 24;
 	hobbiesHeight = $('#hobbies-title').offset().top + 24;
@@ -25,6 +31,14 @@ $(document).ready(function(){
 	showPage(current);
 	$('#project-1-tab').css('background-color', '#393939');
 	$('#project-1-tab').css('box-shadow', 'inset 0 0 2px #000000');
+	
+	/* Uncomment to hide the horizontal scrollbar in the tools container*/
+	if($('.section-title').css('position') !== 'sticky'){
+		//$('.tools-container').css('paddingBottom', '17px');
+		//$('.tools-container').css('paddingTop', '8px');
+		$('.tool-logo').css('height', '80%');
+	}
+	
 	
 	/*$('#home-tab').click(function(e){
 		e.preventDefault();
@@ -116,8 +130,53 @@ $(document).ready(function(){
 		}
 	});
 	
+	var normWidth = window.innerWidth;
+	var scrollbarWidth = normWidth - $('body').width();
+	
 	$('.read-button').click(function(){
-		$('.details-container').show();
+		if($('.details-overlay').css('display') === 'none'){
+			$('.details-overlay').css('display', 'block');
+			$('body').css('overflow', 'hidden');
+			$('.info-button').css('right', scrollbarWidth + 30 + 'px');
+			$('.logo').css('right', scrollbarWidth + 'px');
+			if($('#open-info').css('right') === '0px'){
+				$('#open-info').css('right', '-280px');
+				$('#black-info').fadeIn();
+				$('#white-info').fadeOut();
+			}
+			if($('#open-nav').css('left') === '0px'){
+				$('#black-nav').fadeIn();
+				$('#white-nav').fadeOut();
+				$('#open-nav').css('left', '-280px');
+			}
+		}
+	});
+	
+	$('.details-overlay').click(function(){
+		if($('.details-overlay').css('display') === 'block'){
+			$('.details-overlay').css('display', 'none');
+			$('body').css('overflow', 'auto');
+			$('.info-button').css('right', '30px');
+			$('.logo').css('right', 0);
+		}
+	});
+	
+	$('#right').mousedown(function(){
+		//var increment = maxScroll / 2;
+		//if(scrollDist + increment <= (maxScroll + 5)){
+			scrollDist = maxScroll;
+		//}
+		$('.tools-container').animate({scrollLeft: scrollDist + 'px'}, 400);
+		//$('.tools-container').scrollLeft(scrollDist);	
+	});
+	
+	$('#left').mousedown(function(){
+		//var increment = maxScroll / 2;
+		//if(scrollDist - increment >= -5){
+			scrollDist = 0;
+		//}
+		$('.tools-container').animate({scrollLeft: scrollDist + 'px'}, 400);
+		//$('.tools-container').scrollLeft(scrollDist);	
 	});
 	
 	$('.nav-button').click(function(){
@@ -165,6 +224,10 @@ $(document).ready(function(){
 				$('#white-nav').fadeOut();
 			}, 200);
 		});
+		/* Uncomment to hide the horizontal scrollbar in the tools container
+		$('.tools-container').css('paddingBottom', '0');
+		$('.tools-container').css('paddingTop', '0');
+		*/
 	}
 	else{
 		$('.nav-menu-item').click(function(e){
