@@ -17,7 +17,7 @@ $(document).ready(function(){
 	var wWidth = $(window).width();
 	$('#home-section').css('height', wHeight);
 	$('#home-section').css('width', wWidth);*/
-	$('.tools-container').scrollLeft(999999);
+	$('.tools-container').scrollLeft(10000000);
 	maxScroll = $('.tools-container').scrollLeft();
 	$('.tools-container').scrollLeft(0);
 	$('#start-nav').css('background-color', '#4A4E50');
@@ -34,9 +34,7 @@ $(document).ready(function(){
 	
 	/* Uncomment to hide the horizontal scrollbar in the tools container*/
 	if($('.section-title').css('position') !== 'sticky'){
-		//$('.tools-container').css('paddingBottom', '17px');
-		//$('.tools-container').css('paddingTop', '8px');
-		$('.tool-logo').css('height', '80%');
+		$('.tools-container').css('paddingBottom', '17px');
 	}
 	
 	
@@ -224,10 +222,10 @@ $(document).ready(function(){
 				$('#white-nav').fadeOut();
 			}, 200);
 		});
-		/* Uncomment to hide the horizontal scrollbar in the tools container
+		/* Uncomment to hide the horizontal scrollbar in the tools container */
 		$('.tools-container').css('paddingBottom', '0');
 		$('.tools-container').css('paddingTop', '0');
-		*/
+		
 	}
 	else{
 		$('.nav-menu-item').click(function(e){

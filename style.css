@@ -554,6 +554,7 @@ h1.intro-text {
 	background-color: #FAFAFA;
 	padding: 0;
 	margin: 0;
+	overflow: hidden;
 }
 
 .readmore-container {
@@ -568,7 +569,7 @@ h1.intro-text {
 }
 
 .read-button {
-	width: 75%;
+	width: 85%;
 	height: 60%;
 	border-radius: 3px;
 	text-align: center;
@@ -592,7 +593,7 @@ h1.intro-text {
 	height: 100%;
 	width: 5%;
 	position: relative;
-	z-index: 20;
+	z-index: 10;
 	margin: 0;
 	padding: 0;
 	float: left;
@@ -611,7 +612,7 @@ h1.intro-text {
 	height: 100%;
 	width: 5%;
 	position: relative;
-	z-index: 20;
+	z-index: 10;
 	margin: 0;
 	padding: 0;
 	float: left;
@@ -640,13 +641,13 @@ h1.intro-text {
 /*Uncomment to hide scrollbar*/
 
 .tools-container::-webkit-scrollbar {
-	height: 5px;
+	height: 0;
 	width: 0;
 }
 
 
 .tool-logo {
-	height: 75%; /*Change to 65% if you choose to hide scrollbar*/
+	height: 65%; /*Change to 65% if you choose to hide scrollbar*/
 	top: 50%;
 	position: relative;
 	transform: translateY(-50%);
@@ -677,6 +678,25 @@ h1.intro-text {
 	transform: translate(-50%, -50%);
 	border-radius: 20px;
 	overflow-y: hidden;
+}
+
+.left-details {
+	width: 70%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: aqua;
+	position: relative;
+	float: left;
+}
+
+.right-details {
+	width: 30%;
+	height: 100%;
+	margin: 55px 0 0 0;
+	padding: 0;
+	background-color: aquamarine;
+	display: inline-block;
 }
 
 .details-close {
