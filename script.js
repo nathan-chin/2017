@@ -8,8 +8,8 @@ var ready = true;
 var winHeight, scrolls, shiftHeight, titleHeight;
 var aboutHeight, hobbiesHeight, projectsHeight, contactHeight;
 var scrollDist = 0;
-var curLogo = 1;
-var maxScroll;
+var maxScroll, numScroll;
+var normWidth, scrollbarWidth;
 
 //Perform as soon as the website has loaded
 $(document).ready(function(){
@@ -17,8 +17,9 @@ $(document).ready(function(){
 	var wWidth = $(window).width();
 	$('#home-section').css('height', wHeight);
 	$('#home-section').css('width', wWidth);*/
-	$('.tools-container').scrollLeft(10000000);
+	$('.tools-container').scrollLeft(9999);
 	maxScroll = $('.tools-container').scrollLeft();
+	numScroll = Math.round(maxScroll / $('.tools-container').width() + 1);
 	$('.tools-container').scrollLeft(0);
 	$('#start-nav').css('background-color', '#4A4E50');
 	aboutHeight = $('#about-title').offset().top + 24;
@@ -63,6 +64,8 @@ $(document).ready(function(){
 				$(this).css('background-color', '#393939');
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
 				$('.page-number').text(1);
+				$('.tools-container').animate({scrollLeft: '0px'}, 700);
+				scrollDist = 0;
 			}
 			$('#nav-container').hide();
 		}
@@ -78,6 +81,8 @@ $(document).ready(function(){
 				$(this).css('background-color', '#393939');
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
 				$('.page-number').text(2);
+				$('.tools-container').animate({scrollLeft: '0px'}, 700);
+				scrollDist = 0;
 			}
 			$('#nav-container').hide();
 		}
@@ -93,6 +98,8 @@ $(document).ready(function(){
 				$(this).css('background-color', '#393939');
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
 				$('.page-number').text(3);
+				$('.tools-container').animate({scrollLeft: '0px'}, 700);
+				scrollDist = 0;
 			}
 			$('#nav-container').hide();
 		}
@@ -108,6 +115,8 @@ $(document).ready(function(){
 				$(this).css('background-color', '#393939');
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
 				$('.page-number').text(4);
+				$('.tools-container').animate({scrollLeft: '0px'}, 700);
+				scrollDist = 0;
 			}
 			$('#nav-container').hide();
 		}
@@ -123,58 +132,100 @@ $(document).ready(function(){
 				$(this).css('background-color', '#393939');
 				$(this).css('box-shadow', 'inset 0 0 2px #000000');
 				$('.page-number').text(5);
+				$('.tools-container').animate({scrollLeft: '0px'}, 700);
+				scrollDist = 0;
 			}
 			$('#nav-container').hide();
 		}
 	});
 	
-	var normWidth = window.innerWidth;
-	var scrollbarWidth = normWidth - $('body').width();
+	normWidth = window.innerWidth;
+	scrollbarWidth = normWidth - $('body').width();
 	
-	$('.read-button').click(function(){
-		if($('.details-overlay').css('display') === 'none'){
-			$('.details-overlay').css('display', 'block');
-			$('body').css('overflow', 'hidden');
-			$('.info-button').css('right', scrollbarWidth + 30 + 'px');
-			$('.logo').css('right', scrollbarWidth + 'px');
-			if($('#open-info').css('right') === '0px'){
-				$('#open-info').css('right', '-280px');
-				$('#black-info').fadeIn();
-				$('#white-info').fadeOut();
-			}
-			if($('#open-nav').css('left') === '0px'){
-				$('#black-nav').fadeIn();
-				$('#white-nav').fadeOut();
-				$('#open-nav').css('left', '-280px');
-			}
+	$('#button-details-1').click(function(){
+		if($('#details-1').css('display') === 'none'){
+			$('#details-1').css('display', 'block');
+			detailSelect();
+		}
+	});
+	
+	$('#button-details-2').click(function(){
+		if($('#details-2').css('display') === 'none'){
+			$('#details-2').css('display', 'block');
+			detailSelect();
+		}
+	});
+	
+	$('#button-details-3').click(function(){
+		if($('#details-3').css('display') === 'none'){
+			$('#details-3').css('display', 'block');
+			detailSelect();
+		}
+	});
+	
+	$('#button-details-4').click(function(){
+		if($('#details-4').css('display') === 'none'){
+			$('#details-4').css('display', 'block');
+			detailSelect();
+		}
+	});
+	
+	$('#button-details-5').click(function(){
+		if($('#details-5').css('display') === 'none'){
+			$('#details-5').css('display', 'block');
+			detailSelect();
 		}
 	});
 	
 	$('.details-overlay').click(function(){
-		if($('.details-overlay').css('display') === 'block'){
+		//if($('.details-overlay').css('display') === 'block'){
 			$('.details-overlay').css('display', 'none');
 			$('body').css('overflow', 'auto');
 			$('.info-button').css('right', '30px');
 			$('.logo').css('right', 0);
+		//}
+	});
+	
+	$('.right-arrow').mousedown(function(){
+		var increment = maxScroll / numScroll;
+		if(scrollDist + increment <= (maxScroll + 1)){
+		scrollDist += increment;
+		}
+		else{
+			scrollDist = maxScroll;
+		}
+		$('.tools-container').animate({scrollLeft: scrollDist + 'px'}, 400);
+		//$('.tools-container').scrollLeft(scrollDist);	
+	});
+	
+	$('.right-arrow').hover(function(){
+		if($('.right').css('opacity') === '0.4'){
+			$('.right').css('opacity', '0.7');
+		}
+		else{
+			$('.right').css('opacity', '0.4');
 		}
 	});
 	
-	$('#right').mousedown(function(){
-		//var increment = maxScroll / 2;
-		//if(scrollDist + increment <= (maxScroll + 5)){
-			scrollDist = maxScroll;
-		//}
+	$('.left-arrow').mousedown(function(){
+		var increment = maxScroll / numScroll;
+		if(scrollDist - increment >= -1){
+			scrollDist -= increment;
+		}
+		else{
+			scrollDist = 0;
+		}
 		$('.tools-container').animate({scrollLeft: scrollDist + 'px'}, 400);
 		//$('.tools-container').scrollLeft(scrollDist);	
 	});
 	
-	$('#left').mousedown(function(){
-		//var increment = maxScroll / 2;
-		//if(scrollDist - increment >= -5){
-			scrollDist = 0;
-		//}
-		$('.tools-container').animate({scrollLeft: scrollDist + 'px'}, 400);
-		//$('.tools-container').scrollLeft(scrollDist);	
+	$('.left-arrow').hover(function(){
+		if($('.left').css('opacity') === '0.4'){
+			$('.left').css('opacity', '0.7');
+		}
+		else{
+			$('.left').css('opacity', '0.4');
+		}
 	});
 	
 	$('.nav-button').click(function(){
@@ -710,5 +761,19 @@ var clearSelectMenu = function(){
 	$('.nav-menu-item').css('background-color', 'transparent');
 };
 
-
+var detailSelect = function(){
+	$('body').css('overflow', 'hidden');
+	$('.info-button').css('right', scrollbarWidth + 30 + 'px');
+	$('.logo').css('right', scrollbarWidth + 'px');
+	if($('#open-info').css('right') === '0px'){
+		$('#open-info').css('right', '-280px');
+		$('#black-info').fadeIn();
+		$('#white-info').fadeOut();
+	}
+	if($('#open-nav').css('left') === '0px'){
+		$('#black-nav').fadeIn();
+		$('#white-nav').fadeOut();
+		$('#open-nav').css('left', '-280px');
+	}
+};
 

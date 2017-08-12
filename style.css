@@ -67,7 +67,7 @@ body {
 	display: none;
 }
 
-.nav-button:hover, .info-button:hover, .details-close:hover, #left:hover, #right:hover {
+.nav-button:hover, .info-button:hover, .details-close:hover {
 	opacity: 0.7;
 }
 
@@ -597,9 +597,11 @@ h1.intro-text {
 	margin: 0;
 	padding: 0;
 	float: left;
+	border-left: 2px solid #E3E3E3;
+	box-sizing: border-box;
 }
 
-#left {
+.left {
 	height: 30%;
 	position: absolute;
 	top: 50%;
@@ -618,7 +620,7 @@ h1.intro-text {
 	float: left;
 }
 
-#right {
+.right {
 	height: 30%;
 	position: absolute;
 	top: 50%;
@@ -655,6 +657,13 @@ h1.intro-text {
 	margin: 0 10px;
 }
 
+.tools-container p {
+	text-align: center;
+	font-family: 'Inconsolata', monospace;
+	display: block;
+	margin-top: 40%;
+}
+
 .details-overlay {
 	height: 100vh;
 	width: 100vw;
@@ -670,13 +679,14 @@ h1.intro-text {
 .details-container {
 	width: 60%;
 	background-color: #FAFAFA;
+	color: #262829;
 	height: 93%;
 	display: inline-block;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	border-radius: 20px;
+	border-radius: 10px;
 	overflow-y: hidden;
 }
 
@@ -685,18 +695,19 @@ h1.intro-text {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background-color: aqua;
 	position: relative;
 	float: left;
+	overflow-y: auto;
 }
 
 .right-details {
 	width: 30%;
 	height: 100%;
-	margin: 55px 0 0 0;
+	margin: 0;
 	padding: 0;
-	background-color: aquamarine;
+	background-color: #E8E8E8;
 	display: inline-block;
+	overflow-y: auto;
 }
 
 .details-close {
