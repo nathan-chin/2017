@@ -524,7 +524,7 @@ h1.intro-text {
 	width: 50%;
 	height: 525px;
 	border-radius: 2px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 16px 28px 0 rgba(0, 0, 0, 0.19);
 	display: inline-block;
 	position: relative;
 	/*animation: float 15s ease normal infinite;*/
@@ -535,6 +535,14 @@ h1.intro-text {
 	height: 81%;
 	background-color: orangered;
 	position: relative;
+}
+
+.category-icon {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 5%;
+	opacity: 1;
 }
 
 .project-title {
