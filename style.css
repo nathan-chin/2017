@@ -817,16 +817,15 @@ h1.intro-text {
 	padding: 0;
 }
 
-.icon-container {
-	height: 80px;
-	vertical-align: middle;
+.contact-icons > img {
+	width: 50px;
+	vertical-align: bottom;
 	text-align: center;
 	margin-top: 50px;
+	display: inline;
 }
 
 .contact-icons {
-	position: relative;
 	margin: auto 25px;
-	width: 50px;
-	display: inline;
 }
+
