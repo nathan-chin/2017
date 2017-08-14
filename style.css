@@ -817,15 +817,19 @@ h1.intro-text {
 	padding: 0;
 }
 
-.contact-icons > img {
+.icon-container {
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.contact-icons{
 	width: 50px;
 	vertical-align: bottom;
 	text-align: center;
-	margin-top: 50px;
+	margin: 50px 50px 0;
 	display: inline;
-}
-
-.contact-icons {
-	margin: auto 25px;
+	text-decoration: none;
 }
 
