@@ -33,6 +33,9 @@ $(document).ready(function(){
 	$('#project-1-tab').css('background-color', '#393939');
 	$('#project-1-tab').css('box-shadow', 'inset 0 0 2px #000000');
 	
+	$('.page').css('margin-left', ($(window).width() - $('.page').width()) / 2 + 'px');
+	$('.page').css('margin-right', ($(window).width() - $('.page').width()) / 2 + 'px');
+	
 	/* Uncomment to hide the horizontal scrollbar in the tools container*/
 	if($('.section-title').css('position') !== 'sticky'){
 		$('.tools-container').css('paddingBottom', '17px');
