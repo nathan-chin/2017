@@ -242,11 +242,7 @@ body {
 	bottom: 0;
 	right: 0;
 	width: 10%;
-	z-index: 5;
-}
-
-.logo:hover {
-	width: 12%;
+	z-index: 25;
 }
 
 #about-title {
@@ -584,7 +580,7 @@ h1.intro-text {
 .read-button {
 	width: 85%;
 	height: 60%;
-	border-radius: 3px;
+	border-radius: 2px;
 	text-align: center;
 	margin: auto;
 	padding: 0;
@@ -672,7 +668,7 @@ h1.intro-text {
 }
 
 .tool-logo:hover {
-	height: 75%;
+	height: 70%;
 }
 
 .tools-container p {
@@ -822,14 +818,35 @@ h1.intro-text {
 	padding: 0;
 	margin: 0;
 	border: none;
+	height: 110px;
+	width: 100%;
+}
+
+.icon-square {
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	top: 100%;
+	transform: translateY(-100%);
+	margin: 0 50px;
+	transition: 0.2s ease;
+	border-radius: 2px;
+}
+
+.icon-square:hover {
+	box-shadow: 0 0.75rem 1.875rem rgba(0,0,0,.3);
+	top: 90%;
 }
 
 .contact-icons{
-	width: 50px;
-	vertical-align: bottom;
-	text-align: center;
-	margin: 50px 50px 0;
+	width: 62.5%;
 	display: inline;
 	text-decoration: none;
+	top: 50%;
+	position: relative;
+	transform: translateY(-50%);
 }
 

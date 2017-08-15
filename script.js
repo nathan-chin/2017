@@ -236,6 +236,11 @@ $(document).ready(function(){
 			$('#black-nav').fadeOut();
 			$('#white-nav').fadeIn();
 			$('#open-nav').css('left', '0px');
+			if($('#open-info').css('right') === '0px'){
+				$('#open-info').css('right', '-280px');
+				$('#black-info').fadeIn();
+				$('#white-info').fadeOut();
+			}
 		}
 		else{
 			$('#black-nav').fadeIn();
@@ -249,6 +254,11 @@ $(document).ready(function(){
 			$('#open-info').css('right', '0px');
 			$('#black-info').fadeOut();
 			$('#white-info').fadeIn();
+			if($('#open-nav').css('left') === '0px'){
+				$('#black-nav').fadeIn();
+				$('#white-nav').fadeOut();
+				$('#open-nav').css('left', '-280px');
+			}
 		}
 		else{
 			$('#open-info').css('right', '-280px');
@@ -263,8 +273,27 @@ $(document).ready(function(){
 				$('#about-title').css('transition', 'box-shadow 0.2s ease-in-out');
 				$('#about-title').css('box-shadow', '0 0.125rem 0.3125rem rgba(0,0,0,.3)');
 			}
-			else
+			else{
 				$('#about-title').css('box-shadow', 'none');
+			}
+			
+			clearSelectMenu();
+			if($('#contact-title')[0].getBoundingClientRect().top === -24){
+				$('#contact-nav').css('background-color', '#4A4E50');
+			}
+			else if($('#projects-title')[0].getBoundingClientRect().top === -24){
+				$('#projects-nav').css('background-color', '#4A4E50');
+			}
+			else if($('#hobbies-title')[0].getBoundingClientRect().top === -24){
+				$('#hobbies-nav').css('background-color', '#4A4E50');
+			}
+			else if($('#about-title')[0].getBoundingClientRect().top === -24){
+				$('#about-nav').css('background-color', '#4A4E50');
+			}
+			else{
+				$('#start-nav').css('background-color', '#4A4E50');
+			}
+
 		}, 100);
 		$('.nav-menu-item').click(function(){
 			clearSelectMenu();
@@ -329,10 +358,12 @@ $(document).ready(function(){
 		timeHandleMenu = setTimeout(popFade, 4000);
 	});
 	
-	$(".logo").click(function(){
+	/*$(".logo").click(function(){
 		alert($('#about-title')[0].getBoundingClientRect().top);
+		alert($('#hobbies-title')[0].getBoundingClientRect().top);
+		alert($('#hobbies-section').outerHeight(true) + $('#hobbies-title').height());
 		//$('html, body').animate({scrollTop: '300px'}, 2000);
-	});
+	});*/
 });
 
 window.addEventListener('resize', function(e){
@@ -717,7 +748,7 @@ var stickTitles = function(position){
 		$('#about-title').removeClass(insert);
 		$('#contact-title').addClass(insert);
 		clearSelectMenu();
-		$('#contacts-nav').css('background-color', '#4A4E50');
+		$('#contact-nav').css('background-color', '#4A4E50');
 		if(insert === 'snapF'){
 			$('.no-intro-container').css('padding-top', titleHeight);
 		}
