@@ -150,10 +150,11 @@ body {
 .section-projects {
 	width: 80%;
 	background-color: #EEEEEE;
-	padding: 0;
+	padding: 0 0 20px;
 	margin: 0 10%;
 	top: 0;
 	left: 0;
+	color: #262829;
 }
 
 .section-contact {
@@ -181,7 +182,7 @@ body {
 
 #projects-section {
 	text-align: center;
-	padding: 5% 0;
+	padding: 0;
 	margin: 0;
 	background-color: #EEEEEE;
 }
@@ -291,23 +292,43 @@ body {
 	padding: 10px;
 	margin: auto;
 	width: 80px;
-	z-index: 3000;
+	z-index: 30;
+	border-radius: 2px;
+	box-sizing: border-box;
 }
 
-.menu-button:hover {
-	background-color: #EF5FFF;
+.menu-button:after {
+	content: '';
+	display: block;
+	margin: auto;
+	top: 1px;
+	position: relative;
+	height: 4px;
+	width: 0;
+	background-color: transparent;
+	transition: 0.3s ease;
+}
+
+.menu-button:hover:after {
+	width: 100%;
+	background-color: #262829;
 }
 
 .page-number {
 	padding: 0;
 	margin: 0;
 	display: inline-block;
+	font-weight: bold;
+	font-size: 2rem;
+	color: #262829;
 }
 
 .page-totals {
 	padding: 0;
-	margin: 0;
+	margin: 0 0 0 3px;
 	display: inline-block;
+	font-size: 2rem;
+	color: #262829;
 }
 
 .menu {
@@ -515,7 +536,7 @@ h1.intro-text {
 /*Max width: 1280px */
 .page {
 	text-align: center;
-	margin: 3% auto 5%;
+	margin: 20px auto 5%;
 	background-color: #FFFFFF;
 	width: 759.6px;
 	height: 525px;
@@ -529,8 +550,27 @@ h1.intro-text {
 .project-picture {
 	width: 100%;
 	height: 81%;
-	background-color: orangered;
 	position: relative;
+}
+
+#project-personal-website {
+	background: url(Project-Personal_Website.png);
+	background-size: contain;
+}
+
+#project-sward {
+	background: url(Project-Sward.png);
+	background-size: contain;
+}
+
+#project-worldview {
+	background: url(Project-WorldView.png);
+	background-size: contain;
+}
+
+#project-roundup {
+	background: url(Project-RoundUp.png);
+	background-size: contain;
 }
 
 .category-icon {

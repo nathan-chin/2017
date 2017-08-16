@@ -350,6 +350,14 @@ $(document).ready(function(){
 		timeHandleMenu = setTimeout(popFade, 4000);
 	});
 	
+	/*$('.menu-button').mouseenter(function(){
+		$('.page-number').css('color', '#FDAE24');
+	});
+	
+	$('.menu-button').mouseleave(function(){
+		$('.page-number').css('color', '#262829');
+	});*/
+	
 	$('#nav-container').mouseenter(function(){
 		clearTimeout(timeHandleMenu);
 	});
