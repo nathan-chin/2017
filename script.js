@@ -19,6 +19,13 @@ $(document).ready(function(){
 	$('#home-section').css('width', wWidth);*/
 	$('.tools-container').scrollLeft(9999);
 	maxScroll = $('.tools-container').scrollLeft();
+	//alert($('.tools-wrap')[0].scrollWidth);
+	//alert($('.tools-wrap')[0].clientWidth);
+	arrowDisplay(1);
+	arrowDisplay(2);
+	arrowDisplay(3);
+	arrowDisplay(4);
+	arrowDisplay(5);
 	numScroll = Math.round(maxScroll / $('.tools-container').width() + 1);
 	$('.tools-container').scrollLeft(0);
 	$('#start-nav').css('background-color', '#4A4E50');
@@ -39,6 +46,7 @@ $(document).ready(function(){
 	/* Uncomment to hide the horizontal scrollbar in the tools container*/
 	if($('.section-title').css('position') !== 'sticky'){
 		$('.tools-container').css('paddingBottom', '17px');
+		$('.tools-container').css('top', '8.5px');
 	}
 	
 	
@@ -192,7 +200,7 @@ $(document).ready(function(){
 	$('.right-arrow').mousedown(function(){
 		var increment = maxScroll / numScroll;
 		if(scrollDist + increment <= (maxScroll + 1)){
-		scrollDist += increment;
+			scrollDist += increment;
 		}
 		else{
 			scrollDist = maxScroll;
@@ -202,11 +210,11 @@ $(document).ready(function(){
 	});
 	
 	$('.right-arrow').hover(function(){
-		if($('.right').css('opacity') === '0.4'){
-			$('.right').css('opacity', '0.7');
+		if($('.right-arrow').css('opacity') === '0.4'){
+			$('.right-arrow').css('opacity', '0.7');
 		}
 		else{
-			$('.right').css('opacity', '0.4');
+			$('.right-arrow').css('opacity', '0.4');
 		}
 	});
 	
@@ -223,11 +231,11 @@ $(document).ready(function(){
 	});
 	
 	$('.left-arrow').hover(function(){
-		if($('.left').css('opacity') === '0.4'){
-			$('.left').css('opacity', '0.7');
+		if($('.left-arrow').css('opacity') === '0.4'){
+			$('.left-arrow').css('opacity', '0.7');
 		}
 		else{
-			$('.left').css('opacity', '0.4');
+			$('.left-arrow').css('opacity', '0.4');
 		}
 	});
 	
@@ -816,6 +824,37 @@ var detailSelect = function(){
 		$('#black-nav').fadeIn();
 		$('#white-nav').fadeOut();
 		$('#open-nav').css('left', '-280px');
+	}
+};
+
+var arrowDisplay = function(num){
+	var tempName;
+	var left = '.left-' + num;
+	var right = '.right-' + num;
+	switch(num){
+		case 1:
+			tempName = $(".tools-wrap-1");
+			break;
+		case 2:
+			tempName = $(".tools-wrap-2");
+			break;
+		case 3:
+			tempName = $(".tools-wrap-3");
+			break;
+		case 4:
+			tempName = $(".tools-wrap-4");
+			break;
+		case 5:
+			tempName = $(".tools-wrap-5");
+			break;	
+	}
+	if(tempName[0].scrollWidth > tempName[0].clientWidth){
+		$(left).css('display', 'block');
+		$(right).css('display', 'block');
+	}
+	else{
+		$(left).css('display', 'none');
+		$(right).css('display', 'none');
 	}
 };
 

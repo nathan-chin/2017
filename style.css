@@ -182,7 +182,7 @@ body {
 
 #projects-section {
 	text-align: center;
-	padding: 0;
+	padding: 5% 0 0;
 	margin: 0;
 	background-color: #EEEEEE;
 }
@@ -271,6 +271,38 @@ body {
 	background: #F6D14B;
 	z-index: 13;
 	color: #FAFAFA;
+}
+
+.hobby-container {
+	width: 900px;
+	height: 300px;
+	background-color: #FAFAFA;
+	margin: 50px auto;
+	padding: 0;
+}
+
+.hobby-picture {
+	width: 300px;
+	height: 100%;
+	display: block;
+	background-color: #DBDBDB;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	left: 0;
+	float: left;
+}
+
+.hobby-description {
+	width: 600px;
+	height: 100%;
+	display: block;
+	background-color: #FAFAFA;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	float: left;
+	color: #262829;
 }
 
 .menu-container {
@@ -620,6 +652,8 @@ h1.intro-text {
 	padding: 0;
 	margin: 0;
 	float: left;
+	border-right: 2px solid #E3E3E3;
+	box-sizing: border-box;
 }
 
 .read-button {
@@ -636,7 +670,7 @@ h1.intro-text {
 	font-weight: 500;
 	color: #262829;
 	overflow: hidden;
-	border: 2px solid #262829;
+	
 }
 
 .read-button:before{
@@ -646,19 +680,37 @@ h1.intro-text {
 	position: absolute;
 	top: 0;
 	left: 0;
-	bottom: 100%;
-	right: 0;
-	transition: 0.2s ease;
-	background-color: #262829;
+	right: 100%;
+	bottom: 0;
+	transition: 0.15s ease;
+	opacity: 0.4;
 	z-index: -1;
 }
 
 .read-button:hover:before {
-	bottom: 0;
+	right: 0;
 }
 
-.read-button:hover {
-	color: #FAFAFA;
+#button-details-1:before {
+	background-color: #FFB699;
+}
+
+#button-details-2:before {
+	background-color: #99FFBD;
+	opacity: 0.6;
+}
+
+#button-details-3:before {
+	background-color: #2B2B2B;
+	opacity: 0.3;
+}
+
+#button-details-4:before {
+	background-color: #635BCE;
+}
+
+#button-details-5:before {
+	background-color: #8DD5E8;
 }
 
 .read-text {
@@ -674,17 +726,15 @@ h1.intro-text {
 	margin: 0;
 	padding: 0;
 	float: left;
-	border-left: 2px solid #E3E3E3;
-	box-sizing: border-box;
+	opacity: 0.4;
 }
 
-.left {
+.left-1, .left-2, .left-3, .left-4, .left-5 {
 	height: 30%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	opacity: 0.4;
 }
 
 .right-arrow {
@@ -695,15 +745,15 @@ h1.intro-text {
 	margin: 0;
 	padding: 0;
 	float: left;
+	opacity: 0.4;
 }
 
-.right {
+.right-1, .right-2, .right-3, .right-4, .right-5 {
 	height: 30%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	opacity: 0.4;
 }
 
 .tools-container {
@@ -744,6 +794,14 @@ h1.intro-text {
 	font-family: 'Inconsolata', monospace;
 	display: block;
 	margin-top: 40%;
+}
+
+.tools-wrap-1, .tools-wrap-2, .tools-wrap-3, .tools-wrap-4, .tools-wrap-5 {
+	width: auto;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	position: relative;
 }
 
 .details-overlay {
