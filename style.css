@@ -286,16 +286,15 @@ body {
 	height: 300px;
 	margin: 50px auto;
 	padding: 0;
-	transition: 0.2s ease;
 	position: relative;
 	left: 50%;
 	margin-left: -450px;
 	border-radius: 8px;
+	transition: 0.2s ease;
 }
 
 .hobby-container:hover {
-	box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 16px 28px 0 rgba(0, 0, 0, 0.19);
-	transform: scale(1.02, 1.02);
+	transform: scale(1.1, 1.1);
 }
 
 .hobby-picture {
@@ -306,6 +305,8 @@ body {
 	padding: 0;
 	float: left;
 	text-align: center;
+	transition: 0.2s ease;
+	border-radius: 5px;
 }
 
 .hobby-pic-container {
