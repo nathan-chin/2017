@@ -17,6 +17,16 @@ $(document).ready(function(){
 	var wWidth = $(window).width();
 	$('#home-section').css('height', wHeight);
 	$('#home-section').css('width', wWidth);*/
+	
+	//Move to resize when ready
+	if($(window).width() / $(window).height() < 1.462){
+		$('#home-section').height("68vw");
+	}
+	
+	if($(window).width() < 750){
+		$('.hobby-container').css('marginLeft', '-' + $('.hobby-container').width() / 2 + 'px');
+	}
+	
 	$('.tools-container').scrollLeft(9999);
 	maxScroll = $('.tools-container').scrollLeft();
 	//alert($('.tools-wrap')[0].scrollWidth);

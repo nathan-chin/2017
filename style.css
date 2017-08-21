@@ -103,6 +103,7 @@ body {
 
 .page-container {
 	z-index: 5;
+	overflow-x: hidden;
 }
 
 #home-section {
@@ -294,7 +295,7 @@ body {
 }
 
 .hobby-container:hover {
-	transform: scale(1.1, 1.1);
+	transform: scale(1.05, 1.05);
 }
 
 .hobby-picture {
@@ -917,6 +918,7 @@ h1.intro-text {
 
 #welcome-pic {
 	background-color: #3764B4;
+	margin-top: 10vh;
 }
 
 #about-pic {
@@ -953,12 +955,12 @@ h1.intro-text {
 
 .home-page-subtitle {
 	font-size: 2rem;
-	margin: 0;
+	margin: 0 0 10vh;
 	padding: 0 0 2vh;
 }
 
 .page-title {
-	font-size: 4.5rem;
+	font-size: 3.5rem;
 	margin: 0;
 	padding: 0;
 }
@@ -1017,5 +1019,120 @@ h1.intro-text {
 	top: 50%;
 	position: relative;
 	transform: translateY(-50%);
+}
+
+@media (max-width: 1171px){
+	.home-page-title {
+		font-size: 8rem;
+	}
+	
+	.page-title {
+		font-size: 2.9rem;
+	}
+	
+	.page-subtitle {
+		font-size: 1.9rem;
+	}
+}
+
+@media (max-width: 950px){
+	.hobby-container {
+		width: 750px;
+		margin-left: -375px;
+	}
+	
+	.hobby-picture {
+		width: 250px;
+	}
+	
+	.hobby-description {
+		width: 458px;
+		margin: 0 0 0 42px;
+	}
+}
+
+@media (max-width: 937px){
+	.home-page-title {
+		font-size: 6rem;
+	}
+}
+
+@media (max-width: 750px){
+	.hobby-container {
+		width: 90vw;
+	}
+	
+	.hobby-picture {
+		width: 33%;
+	}
+	
+	.hobby-description {
+		width: 60%;
+		margin: 0 0 0 7%;
+	}
+}
+
+@media (max-width: 703px){
+	.home-page-title {
+		font-size: 4rem;
+	}
+	
+	.home-page-subtitle {
+		font-size: 1.2rem;
+	}
+	
+	.page-title {
+		font-size: 2rem;
+	}
+	
+	.page-subtitle {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 469px){
+	.home-page-title {
+		font-size: 13vw;
+	}
+	
+	.home-page-subtitle {
+		font-size: 4vw;
+	}
+	
+	.page-title {
+		font-size: 8vw;
+	}
+	
+	.page-subtitle {
+		font-size: 6vw;
+	}
+}
+
+@media (max-width: 426px){	
+	.hobby-container {
+		width: 0;
+		height: 0;
+	}
+	
+	.hobby-picture {
+		height: 300px;
+		width: 70vw;
+		display: block;
+		margin: 0 0 -20px;
+		padding: 0;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	
+	.hobby-description {
+		width: 90vw;
+		height: 300px;
+		display: block;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		margin: 0;
+	}
 }
 
