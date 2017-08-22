@@ -367,7 +367,7 @@ body {
 	text-align: center;
 	padding: 10px;
 	margin: auto;
-	width: 80px;
+	width: 90px;
 	z-index: 30;
 	border-radius: 2px;
 	box-sizing: border-box;
@@ -908,7 +908,7 @@ h1.intro-text {
 }
 
 .portrait-container {
-	width: 25%;
+	width: 325px;
 	border-radius: 100%;
 	margin-top: 3%;
 	z-index: 1;
@@ -1021,7 +1021,7 @@ h1.intro-text {
 	transform: translateY(-50%);
 }
 
-@media (max-width: 1171px){
+@media screen and (max-width: 1171px){
 	.home-page-title {
 		font-size: 8rem;
 	}
@@ -1035,7 +1035,7 @@ h1.intro-text {
 	}
 }
 
-@media (max-width: 950px){
+@media screen and (max-width: 950px){
 	.hobby-container {
 		width: 750px;
 		margin-left: -375px;
@@ -1051,13 +1051,28 @@ h1.intro-text {
 	}
 }
 
-@media (max-width: 937px){
+@media screen and (max-width: 937px){
 	.home-page-title {
 		font-size: 6rem;
 	}
+	
+	.portrait-container {
+		width: 300px;
+	}
 }
 
-@media (max-width: 750px){
+@media screen and (max-width: 801px){
+	.page {
+		width: 425.4px;
+		height: 294px;
+	}
+	
+	.details-container {
+		width: 90vw;
+	}
+}
+
+@media screen and (max-width: 750px){
 	.hobby-container {
 		width: 90vw;
 	}
@@ -1070,9 +1085,13 @@ h1.intro-text {
 		width: 60%;
 		margin: 0 0 0 7%;
 	}
+	
+	.portrait-container {
+		width: 300px;
+	}
 }
 
-@media (max-width: 703px){
+@media screen and (max-width: 703px){
 	.home-page-title {
 		font-size: 4rem;
 	}
@@ -1090,7 +1109,19 @@ h1.intro-text {
 	}
 }
 
-@media (max-width: 469px){
+@media screen and (max-width: 686px) {
+	.icon-square {
+		margin: 0 10px;
+	}
+}
+
+@media screen and (max-width: 551px){
+	.portrait-container {
+		width: 250px;
+	}
+}
+
+@media screen and (max-width: 469px){
 	.home-page-title {
 		font-size: 13vw;
 	}
@@ -1106,19 +1137,34 @@ h1.intro-text {
 	.page-subtitle {
 		font-size: 6vw;
 	}
+	
+	.page {
+		width: 100%;
+		box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.08), 0 0 6px 6px rgba(0, 0, 0, 0);
+	}
+	
+	.read-text {
+		font-size: 3vw;
+	}
 }
 
-@media (max-width: 426px){	
+@media screen and (max-width: 426px){	
 	.hobby-container {
 		width: 0;
 		height: 0;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.hobby-container:hover{
+		transform: scale(1,1);
 	}
 	
 	.hobby-picture {
-		height: 300px;
+		height: 200px;
 		width: 70vw;
 		display: block;
-		margin: 0 0 -20px;
+		margin: 16vw 0 8vw;
 		padding: 0;
 		position: relative;
 		left: 50%;
@@ -1133,6 +1179,19 @@ h1.intro-text {
 		left: 50%;
 		transform: translateX(-50%);
 		margin: 0;
+	}
+	
+	.portrait-container {
+		width: 200px;
+	}
+}
+
+@media screen and (max-width: 386px) {
+	
+	.icon-square {
+		width: 60px;
+		height: 60px;
+		margin: 0 5px;
 	}
 }
 

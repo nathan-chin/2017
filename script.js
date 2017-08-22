@@ -27,6 +27,10 @@ $(document).ready(function(){
 		$('.hobby-container').css('marginLeft', '-' + $('.hobby-container').width() / 2 + 'px');
 	}
 	
+	if($(window).width() < 470){
+		$('.page').height($('.page').width() * 0.6911 + 'px');
+	}
+	
 	$('.tools-container').scrollLeft(9999);
 	maxScroll = $('.tools-container').scrollLeft();
 	//alert($('.tools-wrap')[0].scrollWidth);
@@ -325,7 +329,8 @@ $(document).ready(function(){
 		});
 		/* Uncomment to hide the horizontal scrollbar in the tools container */
 		$('.tools-container').css('paddingBottom', '0');
-		$('.tools-container').css('paddingTop', '0');
+		$('.tools-container').css('top', '0');
+		$('.portrait-container').css('marginTop', '5%');
 		
 	}
 	else{
