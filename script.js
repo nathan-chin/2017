@@ -28,7 +28,8 @@ $(document).ready(function(){
 	}
 	
 	if($(window).width() < 470){
-		$('.page').height($('.page').width() * 0.6911 + 'px');
+		//$('.page').height($('.page').width() * 0.6911 + 'px');
+		$('.page').height($(window).height() * 0.7 + 'px');
 	}
 	
 	$('.tools-container').scrollLeft(9999);
@@ -502,6 +503,20 @@ window.addEventListener('resize', function(e){
 	console.log("Resize hobbiesH is " + hobbiesHeight);
 	console.log("Resize paddingTop is " + titleHeight);*/
 	location.reload();
+	
+	/*if($(window).width() / $(window).height() < 1.462){
+		$('#home-section').height("68vw");
+	}
+	
+	if($(window).width() < 750){
+		$('.hobby-container').css('marginLeft', '-' + $('.hobby-container').width() / 2 + 'px');
+	}
+	
+	if($(window).width() < 470){
+		//$('.page').height($('.page').width() * 0.6911 + 'px');
+		$('.page').height($(window).height() * 0.7 + 'px');
+		$('.page').width($(window).width() + 'px');
+	}*/
 });
 
 var onlyOnce = true;
