@@ -13,6 +13,18 @@ body {
 	margin: 0;
 }
 
+.hobby-link:link {
+	color: #2365FF;
+}
+
+.hobby-link:visited {
+	color: #2365FF;
+}
+
+.hobby-link:active {
+	color: #2365FF;
+}
+
 .info-button {
 	width: 30px;
 	position: fixed;
