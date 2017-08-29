@@ -341,12 +341,14 @@ body {
 .hobby-title {
 	margin: 0;
 	padding: 0;
+	font-size: 2.4rem;
 }
 
 .hobby-summary {
 	display: block;
 	margin: 0;
 	padding: 0;
+	font-size: 1.5rem;
 }
 
 .hobby-link:link {
@@ -972,6 +974,7 @@ h1.intro-text {
 	font-size: 2rem;
 	margin: 0 0 10vh;
 	padding: 0 0 2vh;
+	font-weight: 500;
 }
 
 .page-title {
@@ -984,19 +987,14 @@ h1.intro-text {
 	font-size: 2.5rem;
 	margin: 0 0;
 	padding: 0;
+	font-weight: 500;
 }
 
 .body-container {
 	text-align: left;
 	margin: 0 5%;
 	padding: 0;
-}
-
-.body-container p {
-	font-size: 1.5rem;
-	font-weight: 400;
-	margin: 0;
-	padding: 0;
+	font-size: 1.3rem;
 }
 
 .icon-container {
@@ -1065,7 +1063,7 @@ h1.intro-text {
 
 @media screen and (max-width: 950px){
 	.hobby-container {
-		width: 750px;
+		width: 740px;
 		margin-left: -375px;
 	}
 	
@@ -1074,8 +1072,16 @@ h1.intro-text {
 	}
 	
 	.hobby-description {
-		width: 458px;
-		margin: 0 0 0 42px;
+		width: 448px;
+		margin: 0 0 0 32px;
+	}
+	
+	.hobby-title {
+		font-size: 2rem;
+	}
+	
+	.hobby-summary {
+		font-size: 1.4rem;
 	}
 }
 
@@ -1107,6 +1113,7 @@ h1.intro-text {
 @media screen and (max-width: 750px){
 	.hobby-container {
 		width: 90vw;
+		height: 50vw;
 	}
 	
 	.hobby-picture {
@@ -1116,6 +1123,14 @@ h1.intro-text {
 	.hobby-description {
 		width: 60%;
 		margin: 0 0 0 7%;
+	}
+	
+	.hobby-title {
+		font-size: 3.75vw;
+	}
+	
+	.hobby-summary {
+		font-size: 3.15vw;
 	}
 	
 	.portrait-container {
@@ -1250,12 +1265,20 @@ h1.intro-text {
 	
 	.hobby-description {
 		width: 90vw;
-		height: 300px;
+		height: auto;
 		display: block;
 		position: relative;
 		left: 50%;
 		transform: translateX(-50%);
 		margin: 0;
+	}
+	
+	.hobby-title {
+		font-size: 6vw;
+	}
+	
+	.hobby-summary {
+		font-size: 4vw;
 	}
 	
 	.portrait-container {
@@ -1287,7 +1310,7 @@ h1.intro-text {
 	}
 }
 
-@media screen and (max-height: 501px) and (orientation: landscape) {
+@media screen and (max-height: 501px) and (min-width: 750px) and (orientation: landscape) {
 	.portrait-container {
 		width: 150px;
 	}
@@ -1306,5 +1329,8 @@ h1.intro-text {
 		width: 70%;
 	}
 	
+	.hobby-summary {
+		font-size: 1.18rem;
+	}
 }
 
