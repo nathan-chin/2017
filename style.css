@@ -13,18 +13,6 @@ body {
 	margin: 0;
 }
 
-.hobby-link:link {
-	color: #2365FF;
-}
-
-.hobby-link:visited {
-	color: #2365FF;
-}
-
-.hobby-link:active {
-	color: #2365FF;
-}
-
 .info-button {
 	width: 30px;
 	position: fixed;
@@ -361,6 +349,18 @@ body {
 	padding: 0;
 }
 
+.hobby-link:link {
+	color: #2365FF;
+}
+
+.hobby-link:visited {
+	color: #2365FF;
+}
+
+.hobby-link:active {
+	color: #2365FF;
+}
+
 .menu-container {
 	text-align: center;
 	height: auto;
@@ -395,11 +395,6 @@ body {
 	width: 0;
 	background-color: transparent;
 	transition: 0.3s ease;
-}
-
-.menu-button:hover:after{
-	width: 100%;
-	background-color: #262829;
 }
 
 .page-number {
@@ -900,6 +895,7 @@ h1.intro-text {
 	position: relative;
 	float: left;
 	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .right-details {
@@ -910,6 +906,7 @@ h1.intro-text {
 	background-color: #E8E8E8;
 	display: inline-block;
 	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .details-close {
@@ -1059,6 +1056,13 @@ h1.intro-text {
 	}
 }
 
+@media screen and (min-width: 1024px){
+	.menu-button:hover:after{
+		width: 100%;
+		background-color: #262829;
+	}
+}
+
 @media screen and (max-width: 950px){
 	.hobby-container {
 		width: 750px;
@@ -1203,6 +1207,21 @@ h1.intro-text {
 	
 	.read-text {
 		font-size: 6vw;
+	}
+	
+	.details-container {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	
+	.left-details {
+		width: 100%;
+		height: auto;
+	}
+	
+	.right-details {
+		width: 100%;
+		height: auto;
 	}
 }
 
