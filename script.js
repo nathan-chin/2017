@@ -32,6 +32,10 @@ $(document).ready(function(){
 		$('.page').height($(window).height() * 0.7 + 'px');
 	}
 	
+	if($(window).width() < 768){
+		$('#contact-section').height($(window).height() - $('#contact-title').height() - 36);
+	}
+	
 	$('.tools-container').scrollLeft(9999);
 	maxScroll = $('.tools-container').scrollLeft();
 	//alert($('.tools-wrap')[0].scrollWidth);

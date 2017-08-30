@@ -44,6 +44,13 @@ body {
 	width: 260px;
 }
 
+.info-content-disclaimer {
+	color: #FAFAFA;
+	width: 260px;
+	padding: 0 10px;
+	font-size: 12px;
+}
+
 #white-info {
 	width: 20px;
 	top: 27.5px;
@@ -1061,6 +1068,28 @@ h1.intro-text {
 	}
 }
 
+@media screen and (max-width: 1025px) {
+	.section-about {
+		width: 90%;
+		margin: 0 5%;
+	}
+	
+	.section-hobbies {
+		width: 90%;
+		margin: 0 5%;
+	}
+	
+	.section-projects {
+		width: 90%;
+		margin: 0 5%;
+	}
+	
+	.section-contact {
+		width: 90%;
+		margin: 0 5%;
+	}
+}
+
 @media screen and (max-width: 950px){
 	.hobby-container {
 		width: 740px;
@@ -1085,7 +1114,7 @@ h1.intro-text {
 	}
 }
 
-@media screen and (max-width: 937px){
+@media screen and (max-width: 937px){	
 	.home-page-title {
 		font-size: 6rem;
 	}
@@ -1107,6 +1136,28 @@ h1.intro-text {
 	
 	.details-container {
 		width: 90vw;
+	}
+}
+
+@media screen and (max-width: 769px) {
+	.section-about {
+		width: 95%;
+		margin: 0 2.5%;
+	}
+	
+	.section-hobbies {
+		width: 95%;
+		margin: 0 2.5%;
+	}
+	
+	.section-projects {
+		width: 95%;
+		margin: 0 2.5%;
+	}
+	
+	.section-contact {
+		width: 95%;
+		margin: 0 2.5%;
 	}
 }
 
@@ -1166,6 +1217,8 @@ h1.intro-text {
 	.portrait-container {
 		width: 250px;
 	}
+	
+	
 }
 
 @media screen and (max-width: 469px){
