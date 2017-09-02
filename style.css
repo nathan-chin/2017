@@ -17,6 +17,10 @@ h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 }
 
+.add-space {
+	margin-bottom: 10px;
+}
+
 .special-link:link {
 	color: #2365FF;
 }
