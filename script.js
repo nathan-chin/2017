@@ -297,7 +297,7 @@ $(document).ready(function(){
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		setInterval(function(){
 			if($('#about-title')[0].getBoundingClientRect().top === -24){
-				$('#about-title').css('transition', 'box-shadow 0.2s ease-in-out');
+				$('#about-title').css('transition', 'box-shadow 0.3s ease');
 				$('#about-title').css('box-shadow', '0 0.125rem 0.3125rem rgba(0,0,0,.3)');
 			}
 			else{

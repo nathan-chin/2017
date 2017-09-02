@@ -249,7 +249,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .snapF {
-	transition: box-shadow 0.2s ease-in-out;
+	transition: box-shadow 0.3s ease;
 	box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,.3);
 	position: fixed;
 	position: -webkit-sticky;
@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .snapS {
-	transition: box-shadow 0.2s ease-in-out;
+	transition: box-shadow 0.3s ease;
 	box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,.3);
 }
 
@@ -1291,6 +1291,7 @@ h1.intro-text {
 	.details-container {
 		overflow-x: hidden;
 		overflow-y: auto;
+		border-radius: 0;
 	}
 	
 	.left-details {
