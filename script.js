@@ -347,6 +347,18 @@ $(document).ready(function(){
 			//clearSelectMenu();
 			//$(this).css('background-color', '#4A4E50');
 		});
+		$('#hobbies-link').click(function(e){
+			var link = $(e.target).attr('href');
+			$('html, body').animate({scrollTop: $(link).offset().top + 'px'}, 700);
+			$('html').scrollTop($(link).offset().top + 'px');
+			e.preventDefault();
+		});
+		$('#contact-link').click(function(e){
+			var link = $(e.target).attr('href');
+			$('html, body').animate({scrollTop: $(link).offset().top + 'px'}, 1000);
+			$('html').scrollTop($(link).offset().top + 'px');
+			e.preventDefault();
+		});
 	}
 	
 	/*$('#contact-tab').click(function(e){
