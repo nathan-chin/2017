@@ -650,7 +650,7 @@ var shiftLeft = function(newTab){
 	var tempNew = getPage(newTab);
 	
 	var width = $(window).width() + 4;
-	var height = $(window).outerHeight(true);
+	//var height = $(window).outerHeight(true);
 	tempCur.css('left', 0);
 	tempNew.css('left', 0);
 	showPage(current);
@@ -696,7 +696,7 @@ var shiftRight = function(newTab){
 	var tempNew = getPage(newTab);
 	
 	var width = $(window).width() + 4;
-	var height = $(window).outerHeight(true);
+	//var height = $(window).outerHeight(true);
 	//$(tempNew).insertBefore(tempCur);
 	tempCur.css('left', -width);
 	tempNew.css('left', -width);
