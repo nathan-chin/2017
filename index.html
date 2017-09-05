@@ -22,21 +22,33 @@ about
 
  <html lang="en">
   <head>
+   <!-- Global Site Tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105856808-1"></script>
+   <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments)};
+   gtag('js', new Date());
+
+   gtag('config', 'UA-105856808-1');
+   </script>
+   <!--End Global Site Tag-->
+
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale = 1, maximum-scale=1, user-scalable=no">
    <meta name="description" content="The personal website of Nathan Chin">
    <meta name="author" content="Nathan Chin">
-   <!-- Google Analytics -->
+   <!--Google Analytics-->
    <script>
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-   ga('create', 'UA-XXXXX-Y', 'auto');
+   ga('create', 'UA-105856808-1', 'auto');
    ga('send', 'pageview');
+
    </script>
-   <!-- End Google Analytics -->
+   <!--End Google Analytics-->
    <link rel="shortcut-icon" type="image/x-icon" href="favicon.ico">
    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
    <link href="style.css" rel="stylesheet" type="text/css">
@@ -420,9 +432,9 @@ about
      </div>
      <div class="right-details">
       <h3 style="margin-top: 10px">Stats:</h3>
-      <p class="add-space">Time spent: June 2017 - August 2017 (~2 months)</p>
-      <p class="add-space">Teammates: 0</p>
-      <p class="add-space">Tools used: HTML, CSS, Javascript, jQuery, Adobe Illustrator, Adobe Dreamweaver, and Google Analytics</p>
+      <p class="add-space"><b>Time spent:</b> June 2017 - August 2017 (~2 months)</p>
+      <p class="add-space"><b>Teammates:</b> 0</p>
+      <p class="add-space"><b>Tools used:</b> HTML, CSS, Javascript, jQuery, Adobe Illustrator, Adobe Dreamweaver, and Google Analytics</p>
       <h3>Links:</h3>
       <p class="add-space">&#8226 <a href="https://github.com/nathan-chin/Personal-Website" target="_blank" class="special-link">Github</a></p>
       <h3>Things learned:</h3>
@@ -451,23 +463,26 @@ about
       <h2>How did you build this?</h2>
       <p class="add-space">With very careful planning and long nights. For our first few work days, my partner and I met in empty classrooms and used the whiteboards to write every single requirement for the game and how the game itself would be designed. From there, we worked on together and individually on the small components of the game (like 3D printing the controllers, reading input from the joysticks and buttons, creating the physics engine, drawing graphics onto the screen, etc.) until we were able to piece them into bigger components and test those. We made sure that, at each level of development, the components were functional. It helped that Kylar and I went above and beyond on the previous labs for this class because, for this final lab, we were able to reuse a 6-bit DAC to play our game soundtrack (with chords!) and our ADC for joystick input.</p>
       <h2>Challenges faced?</h2>
-      <p class="add-space">One of the our biggest challenges with this project was</p>
+      <p class="add-space">One of the our biggest challenges with this project was learning how to work with stuff we weren't familiar with. For example, we had never before used joysticks in the class, but we purchased two to use in our game. Although familiar with ADCs and how to read analog input, I had to learn how to read input from the joysticks by myself by looking at documentation and trial/error. Another big challenge we faced was condensing the game to fit onto our microcontroller. We had only 256 KB of flash memory to store everything about our game, including the code, the background map image, the music chords, and over 100 sprite graphics. We had to find ways to save memory like by reducing image quality, but we ended up having just enough memory using 255 KB.</p>
       <h2>Your contribution?</h2>
-      <p class="add-space">Similar to my role when working on Tower Titans, a huge contribution of mine came in the beginning organization and designing of the game. Besides creating every single graphic used in the game, I also helped by writing all of the collision code (), assisting with the physics engine, translating the game music to be used in our game, making the ADC and hooking up the joysticks and buttons, and writing a lot of the </p>
+      <p class="add-space">Besides creating every single graphic used in the game, I also helped by writing all of the collision code (checking if players hitting a wall, hit by a sword, etc.), assisting with the physics engine, translating the game music to be used in our game, making the ADC and hooking up the joysticks and buttons, and writing a lot of the accessor methods to check the player states. Also, similar to my role when working on Tower Titans, a huge contribution of mine came in the beginning organization and designing of the game.</p>
      </div>
      <div class="right-details">
       <h3 style="margin-top: 10px">Stats:</h3>
-      <p class="add-space">Time spent: March 2017 - April 2017 (~1 month)</p>
-      <p class="add-space">Teammates: 1 (Kylar Osborne)</p>
-      <p class="add-space">Tools used: C, ARM assembly, Keil uVision IDE, Adobe Illustrator, TM4C123 Microcontroller, and a 3D Printer</p>
+	  <p class="add-space"><b>Time spent:</b> March 2017 - April 2017 (~1 month)</p>
+      <p class="add-space"><b>Teammates:</b> 1 (Kylar Osborne)</p>
+      <p class="add-space"><b>Tools used:</b> C, ARM assembly, Keil uVision IDE, Adobe Illustrator, TM4C123 Microcontroller, and a 3D Printer</p>
       <h3>Links:</h3>
-      <p>Check out <a href="https://www.flickr.com/photos/utece/sets/72157683360638376" target="_blank" class="special-link">photos taken on the competition day</a></p>
+      <p class="add-space">&#8226 Check out <a href="https://www.flickr.com/photos/utece/sets/72157683360638376" target="_blank" class="special-link">photos taken on the competition day</a></p>
       <!--<p class="add-space">Youtube</p>-->
       <h3>Things learned:</h3>
+      <p>&#8226 Saving memory has become a lot more important to me than I realized. It's not really something you think about when dealing with high-level languages, but it became a huge obstacle for us on this project</p>
       <p>&#8226 Working with both hardware and software on the same project is actually really cool</p>
-      <p>&#8226 </p>
-      <p class="add-space">&#8226 </p>
+      <p>&#8226 There is more to programming then just the high-level languages I've seen before (like Java)</p>
+      <p class="add-space">&#8226 I respect the video game industry, especially Nintendo, a lot more now after seeing how they were able to compact games like Super Mario 64 with such little memory available</p>
       <h3>Looking to the future:</h3>
+      <p>&#8226 Texas Instruments actually gifted me and my partner a <a href="https://beagleboard.org/blue" target="_blank" class="special-link">BeagleBone Blue </a> board for placing in the EE319K competition, so maybe attempt a project with it using bluetooth</p>
+      <p>&#8226 Remember the importance of memory usage with projects</p>
       <p class="add-space">&#8226 Definitely going to try to find ways to use hardware with my software projects</p>
      </div>
     </div>   	
@@ -479,28 +494,32 @@ about
      <div class="left-details">
       <h1 class="details-title">WorldView</h1>
       <h2>What is it?</h2>
-      <p class="add-space">Insert text</p>
+      <p class="add-space">WorldView is a website that allows users to interact with a 3D data visualization model of Twitter sentiment. Users input any word, press enter, and are then able to control a point-of-view camera with the arrow keys to get a bigger picture of how the world feels about the input word. The site is called WorldView because 100 cubes are generated in the shape of the world, and based on Twitter sentiment, certain percentages of the blocks represent certain feelings.</p>
       <h2>Why did you build this?</h2>
-      <p class="add-space">Insert text</p>
+      <p class="add-space">I helped to build this at <a href="http://www.hackdfw.com/earthack" target="_blank" class="special-link">Earthack 2017</a> to be submitted for the Best Social Impact award. It was built to show users the bigger picture on how the world feels about different topics, especially for users who might be unaware of these feelings. For example, I might not believe climate change is affecting humans at all (not my actual opinion), but after searching the words "climate change" and reading data tweets from all over the world, I might see that a large percentage of the world sees climate change in a negative light, making me come to a realization that climate change might actually be bad.</p>
       <h2>How did you build this?</h2>
-      <p class="add-space">Insert text</p>
+      <p class="add-space">This project was built with three.js, HTML, CSS, and Bootstrap for the front-end and Flask and Python for back-end. With 5 people total on the team, the project was divided by front-end and back-end, and I was part of the front-end team. For 36 hours, we each worked on our own parts (see my contributions below), and near the end of the time we all came together to piece the project together, optimize the running speed, and create a presentation for our project.</p>
       <h2>Challenges faced?</h2>
-      <p class="add-space">Insert text</p>
+      <p class="add-space">The biggest challenge I faced was learning Javascript for the first time and then using three.js for the first time. I had to read the three.js documentation and complete the tutorials to even start putting stuff on the screen.</p>
       <h2>Your contribution?</h2>
-      <p class="add-space">Insert text</p>
+      <p class="add-space">I built the whole front-end of the WorldView website. Using three.js, I created all of the 3D cube objects on the screen, made a camera object that is point-of-view and moveable, and allowed for the cubes to be colored accordingly and shaped into a sphere.</p>
      </div>
      <div class="right-details">
       <h3 style="margin-top: 10px">Stats:</h3>
-      <p class="add-space">Time spent: April 21, 2017 - April 23, 2017 (36 hours)</p>
-      <p class="add-space">Teammates: 4 (Abbas Ally, Jinseok Yeom, Avi Minocha, and Carlos Barahona)</p>
-      <p class="add-space">Tools used: HTML, CSS, Javascript (Three.js), Python, Flask, and Amazon Web Services</p>
+      <p class="add-space"><b>Time spent:</b> April 21, 2017 - April 23, 2017 (36 hours)</p>
+      <p class="add-space"><b>Teammates:</b> 4 (Abbas Ally, Jinseok Yeom, Avi Minocha, and Carlos Barahona)</p>
+      <p class="add-space"><b>Tools used:</b> HTML, CSS, Javascript (Three.js), Python, Flask, Twitter API, and Amazon Web Services</p>
       <h3>Links:</h3>
       <p>&#8226 <a href="https://github.com/nathan-chin/hackdfw2017" target="_blank" class="special-link">Github</a></p>
       <p class="add-space">&#8226 <a href="https://devpost.com/software/hackdfw2017" target="_blank" class="special-link">Devpost</a></p>
       <h3>Things learned:</h3>
-      <p class="add-space">Insert text</p>
+      <p>&#8226 How to effectively teach myself something new for a hackathon</p>
+      <p>&#8226 Fruit snacks cannot keep you awake for 36 hours</p>
+      <p class="add-space">&#8226 Hackathon teams should have a mix of amateurs and people who know what they're doing. My team consisted of three freshman and two upperclassmen, and having the upperclassmen there really helped fill in a lot of the gaps when it came to piecing our project together. I think everyone got something good out of the experience</p>
       <h3>Looking to the future:</h3>
-      <p class="add-space">Insert text</p>
+      <p>&#8226 Try to get involved with more web development (more practical web development)</p>
+      <p>&#8226 Plan to have some upperclassmen in future hackathon groups</p>
+      <p class="add-space">&#8226 Try to get involved with back-end development</p>
      </div>
     </div>   	
    </div>
@@ -515,17 +534,17 @@ about
       <h2>Why did you build this?</h2>
       <p class="add-space">This project started at my first hackathon (HackTX 2016). Having only worked on one other project, my partner and I decided to spend most of the hackathon learning new skills for this new project. We chose to build this Android application because Android Studio uses Java, a language my partner and I were already familiar with. There was almost nothing to show for this project after the hackathon, but the experience was so meaningful to me that I decided to start working on it again over winter break. I decided to continue working on it because this project showed me how fun it was to learn new languages and apply programming knowledge outside of a classroom setting. Eventually work on the project stopped due to the busyness of classwork, but the reasons why I started working on projects was impacted by this project. </p>
       <h2>How did you build this?</h2>
-      <p class="add-space">Insert text</p>
+      <p class="add-space">This project was built mainly in Android Studio. I spent a lot of the time at HackTX actually learning how to use Android Studio, but most of the work was done over winter break. I completed several Udacity courses on Android Studio to really learn about the IDE and how to properly develop Android apps. When it came time to build the app, I wrote code for everything. I didn't use the click-and-drag UI builder available in Android Studio because I wanted to really learn for myself and have full control over the design. My partner dealt with all of the Google Firebase implementations, and he placed it into my code in Android Studio for use in the app.</p>
       <h2>Challenges faced?</h2>
-      <p class="add-space">Insert text</p>
+      <p class="add-space">There were many challenges faced on this project. First of all, I had to learn how to properly develop Android apps. This included adapting the app for different screen sizes and making use of all the features on the Android OS (push notifications, etc.). Secondly, making the UI do exactly what you wanted was super hard. Formatting everything in XML was pretty cool, but I never felt like I had complete control of the objects, with margins and box models acting differently than expected. Finally, Android Studio presented a lot of runtime errors that make it difficult to build and run. There were times when even Stack Overflow couldn't fix out error messages, and it was very annoying in the beginning of the project.</p>
       <h2>Your contribution?</h2>
       <p class="add-space">This project really impacted me a lot, so I ended up spending a lot of time with this project and writing most of the code in Android Studio. I designed the app, made the logos, and wrote the Java classes for the structure of the application. I left just about all of the Google Firebase learning and application to my partner, but as for the UI and functionality of the application, I did most of that work.</p>
      </div>
      <div class="right-details">
       <h3 style="margin-top: 10px">Stats:</h3>
-      <p class="add-space">Time spent: October 2016, December 2016 - January 2017 (1 hackathon & ~1 month)</p>
-      <p class="add-space">Teammates: 1 (Vikas Peraka)</p>
-      <p class="add-space">Tools used: Android Studio, Java, Google Firebase, and Adobe Illustrator</p>
+      <p class="add-space"><b>Time spent:</b> October 2016, December 2016 - January 2017 (1 hackathon & ~1 month)</p>
+      <p class="add-space"><b>Teammates:</b> 1 (Vikas Peraka)</p>
+      <p class="add-space"><b>Tools used:</b> Android Studio, Java, Google Firebase, and Adobe Illustrator</p>
       <h3>Links:</h3>
       <p class="add-space">&#8226 <a href="https://github.com/nathan-chin/RoundUp-Application-Android" target="_blank" class="special-link">Github</a></p>
       <h3>Things learned:</h3>
@@ -534,7 +553,7 @@ about
       <p class="add-space">&#8226 Android operating systems are used in so many different phones, making the UI very hard to design</p>
       <h3>Looking to the future:</h3>
       <p>&#8226 Finish the application and publish it on the Google Play Store</p>
-      <p class="add-space">&#8226 Maybe try developing for Apple phones</p>
+      <p class="add-space">&#8226 Maybe try developing for Apple operating systems</p>
      </div>
     </div>   	
    </div>
@@ -557,9 +576,9 @@ about
      </div>
      <div class="right-details">
       <h3 style="margin-top: 10px">Stats:</h3>
-      <p class="add-space">Time spent: April 2016 - May 2016 (~1 month)</p>
-      <p class="add-space">Teammates: 2 (Marcus Deng and Vikas Peraka)</p>
-      <p class="add-space">Tools used: Java and Adobe Illustrator</p>
+      <p class="add-space"><b>Time spent:</b> April 2016 - May 2016 (~1 month)</p>
+      <p class="add-space"><b>Teammates:</b> 2 (Marcus Deng and Vikas Peraka)</p>
+      <p class="add-space"><b>Tools used:</b> Java and Adobe Illustrator</p>
       <h3>Links:</h3>
 	  <p class="add-space">&#8226 <a href="https://github.com/nathan-chin/Tower-Titans" target="_blank" class="special-link">Github</a></p>
       <h3>Things learned:</h3>
