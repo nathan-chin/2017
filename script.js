@@ -383,7 +383,7 @@ $(document).ready(function(){
 			else{
 				$('#about-title').css('box-shadow', 'none');
 			}
-			
+			/*
 			clearSelectMenu();
 			if($('#contact-title')[0].getBoundingClientRect().top === -24){
 				$('#contact-nav').css('background-color', '#4A4E50');
@@ -399,13 +399,15 @@ $(document).ready(function(){
 			}
 			else{
 				$('#start-nav').css('background-color', '#4A4E50');
-			}
+			}*/
 
 		}, 100);
 		$('.nav-menu-item').click(function(){
 			clearSelectMenu();
-			$(this).css('background-color', '#4A4E50');
-			$(this).css('color', '#FAFAFA');
+			if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )){
+				$(this).css('background-color', '#4A4E50');
+				$(this).css('color', '#FAFAFA');
+			}
 			setTimeout(function(){
 				$('#open-nav').css('left', '-280px');
 				$('#black-nav').fadeIn();
