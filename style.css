@@ -6,11 +6,19 @@ html {
 	font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
 	padding: 0;
 	margin: 0;
+	overflow: hidden;
+	width: 100%;
 }
 
 body {
 	padding: 0;
 	margin: 0;
+	overflow: scroll;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -653,6 +661,7 @@ h1.intro-text {
 	height: 81%;
 	position: relative;
 }
+
 #project-chillpill {
 	background: url("Images-Original/Project-ChillPill.png");
 	background-size: cover;
