@@ -46,7 +46,9 @@ $(document).ready(function(){
 			arrowDisplay(6);
 			numScroll = Math.round(maxScroll / $('.tools-container').width() + 1);
 			$('.tools-container').scrollLeft(0);
-			$('#start-nav').css('background-color', '#4A4E50');
+			if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ){
+				$('#start-nav').css('background-color', '#4A4E50');
+			}
 			aboutHeight = $('#about-title').offset().top + 24;
 			hobbiesHeight = $('#hobbies-title').offset().top + 24;
 			projectsHeight = $('#projects-title').offset().top + 24;
@@ -93,7 +95,9 @@ $(document).ready(function(){
 	arrowDisplay(6);
 	numScroll = Math.round(maxScroll / $('.tools-container').width() + 1);
 	$('.tools-container').scrollLeft(0);
-	$('#start-nav').css('background-color', '#4A4E50');
+	if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ){
+		$('#start-nav').css('background-color', '#4A4E50');
+	}
 	aboutHeight = $('#about-title').offset().top + 24;
 	hobbiesHeight = $('#hobbies-title').offset().top + 24;
 	projectsHeight = $('#projects-title').offset().top + 24;
