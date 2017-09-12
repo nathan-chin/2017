@@ -31,11 +31,9 @@ $(document).ready(function(){
 			if($(window).width() < 470){
 				//$('.page').height($('.page').width() * 0.6911 + 'px');
 				$('.page').height($(window).height() * 0.7 + 'px');
-			}
-
-			if($(window).width() < 768){
 				$('#contact-section').height($(window).height() - $('#contact-title').height() - 36);
 			}
+
 			$('.tools-container').scrollLeft(9999);
 			maxScroll = $('.tools-container').scrollLeft();
 			//alert($('.tools-wrap')[0].scrollWidth);
@@ -79,11 +77,9 @@ $(document).ready(function(){
 	if($(window).width() < 470){
 		//$('.page').height($('.page').width() * 0.6911 + 'px');
 		$('.page').height($(window).height() * 0.7 + 'px');
-	}
-	
-	if($(window).width() < 768){
 		$('#contact-section').height($(window).height() - $('#contact-title').height() - 36);
 	}
+
 	
 	$('.tools-container').scrollLeft(9999);
 	maxScroll = $('.tools-container').scrollLeft();
